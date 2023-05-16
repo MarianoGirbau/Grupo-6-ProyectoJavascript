@@ -18,6 +18,9 @@ color: blue;
 .color3{
   color: rgb(255, 0, 234);
 }
+.color4{
+color: #fbff01;
+}
 
 .rainbow-border {
 position: relative;
