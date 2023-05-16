@@ -1,94 +1,52 @@
 
-  .py-1 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
+.body {
+  background-color: #55379c;
+}
 
-  .container {
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-right: auto;
-    margin-left: auto;
-  }
+.color{
+  color: green ;
+}
 
-  .px-4 {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-  }
+.color1{
+color: red;
+}
 
-  .px-lg-5 {
-    padding-right: 3rem;
-    padding-left: 3rem;
-  }
+.color2{
+color: blue;
+}
 
-  .my-5 {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
+.color3{
+  color: rgb(255, 0, 234);
+}
 
-  .mb-4 {
-    margin-bottom: 1.5rem;
-  }
+.rainbow-border {
+position: relative;
+overflow: hidden;
+border-radius: 5px;
+}
 
-  .text-center {
-    text-align: center;
-  }
+.rainbow-border::before {
+content: '';
+position: absolute;
+top: 20px;
+left: 20px;
+right: 20px;
+bottom: 20px;
+background: linear-gradient(#00ccff, #d500f9);
+animation: rotate 10s linear infinite;
+border-radius: 5px;
+z-index: -1;
+}
 
-  .title-product {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
+.card {
+position: relative;
+z-index: 1;
+}
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-
-  .col-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .review-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-
-  .people-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-
-  .people-review-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-
-  .people-review-name {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .bi-star-fill,
-  .bi-star {
-    color: gold;
-    font-size: 16px;
-    margin-right: 3px;
-  }
-
-  .p-review {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
+@keyframes rotate {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}}
