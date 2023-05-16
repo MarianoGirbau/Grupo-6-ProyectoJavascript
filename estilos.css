@@ -1,93 +1,76 @@
-.py-1 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
+.btn-product{
+  background-color: #E73700;
+  color: white;
+}
 
-  .container {
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-right: auto;
-    margin-left: auto;
-  }
+.banner-category{
+  height: 40hv;
+  background-image:  url(../src/1.jpg), linear-gradient(rgb(163, 135, 135), rgb(175, 194, 8));
+  background-size: cover;
+  background-position: 69%;
+}
 
-  .px-4 {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-  }
+.banner-category-sofa{
+  height: 40hv;
+  background-image:  url(../src/sofa-banner.jpeg), linear-gradient(rgb(163, 135, 135), rgb(175, 194, 8));
+  background-size: cover;
+  background-position: 69%;
+}
 
-  .px-lg-5 {
-    padding-right: 3rem;
-    padding-left: 3rem;
-  }
+.price-product{
+  color: #E73700;
+  font-weight: 600;
+}
 
-  .my-5 {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
+.title-product{
+  font-weight: bold;
+}
 
-  .mb-4 {
-    margin-bottom: 1.5rem;
-  }
+.row-comentarios{
+  border: 1px solid rgb(124, 124, 124);
+}
 
-  .text-center {
-    text-align: center;
-  }
+.people-container{
+  position: relative;
+  display: flex;
+  align-items: end;
+  flex-direction: row;
+}
 
-  .title-product {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
+.people-review-image{
+  height: 70px;
+  width: 71px;
+  border-radius: 50%;
+}
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
+.people-review-name{
+  vertical-align: middle;
+  align-self: center;
+}
 
-  .col-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.p-review{
+  line-height: 2;
+}
 
-  .review-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
 
-  .people-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
+.bi-star-fill{
+  color: #fbd600;
+  
+}
 
-  .people-review-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
+.paginationContainer{
+  display: flex;
+  justify-content: center;
+  
+}
 
-  .people-review-name {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-  }
+.paginationContainer a{
+  color: #E73700;
+}
 
-  .bi-star-fill,
-  .bi-star {
-    
-    font-size: 16px;
-    margin-right: 3px;
-  }
+.boton-color:hover{background: color;}
 
-  .p-review {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
+@media screen and (max-width: 600px) {
+  iframe {
+      width: 90vw; }
+}
