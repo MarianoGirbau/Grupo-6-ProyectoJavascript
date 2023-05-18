@@ -75,6 +75,8 @@ footer{
     border-color: #dcb2ce !important; 
   }
 
+  /* carousel */
+
 .imagenCarousel{
     width: 100%;
     height: 400px;
@@ -84,7 +86,10 @@ footer{
 .imagen{
     width: 350px;
     height: 200px;
+    object-fit: cover;
 }
+
+/* slider */
 
 .slider{
     width: 75vw;
