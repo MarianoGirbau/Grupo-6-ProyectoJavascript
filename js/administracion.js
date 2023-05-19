@@ -1,7 +1,5 @@
 let productos = []; //arreglo de productos
 
-
-
 class Producto {
     constructor(id,nombre,precio,descripcion,imagen) {
         this.id = id
@@ -13,7 +11,7 @@ class Producto {
 }
 
 class UI {
-    ShowProducts(){
+    showProducts(){
         const listaProductos = document.getElementById('lista-productos')
         listaProductos.querySelector("tbody").innerHTML = "";
         productos.forEach((producto) => {
@@ -45,29 +43,35 @@ class UI {
 
 //Eventos DOM
 
-//Agregar Productos
+//Agregar Productos Predefinidos
+
+function productosCargados () {
+    
+}
+
+//Agregar Nuevos Productos 
 let tabla = new UI()
 
 document.getElementById('product-form')
     .addEventListener('submit', function(event){
-    /* Obtengo los valores escritos en el formulario */    
-    const nombre = document.getElementById('nombre').value
-    const precio = document.getElementById('precio').value
-    const descripcion = document.getElementById('descripcion').value
-    const imagen = document.getElementById('imagen').value
+        /* Obtengo los valores escritos en el formulario */    
+        const nombre = document.getElementById('nombre').value
+        const precio = document.getElementById('precio').value
+        const descripcion = document.getElementById('descripcion').value
+        const imagen = document.getElementById('imagen').value
 
-    const producto = new Producto(uuidv4(),nombre,precio,descripcion,imagen) //Creo un objeto producto con los datos del formulario
-    
-    productos.push(producto) //agrego el producto al arreglo de productos
-    
-    console.log(productos)
+        const producto = new Producto(uuidv4(),nombre,precio,descripcion,imagen) //Creo un objeto producto con los datos del formulario
+        
+        productos.push(producto) //agrego el producto al arreglo de productos
+        
+        console.log(productos)
 
-    tabla.ShowProducts() //Actualiza la tabla
+        tabla.showProducts() //Actualiza la tabla
 
-    const agregarProductosForm = document.getElementById("product-form");
-    agregarProductosForm.reset()
-    
-    event.preventDefault() //hace que no se actualice la pagina al enviar el form
+        const agregarProductosForm = document.getElementById("product-form");
+        agregarProductosForm.reset()
+        
+        event.preventDefault() //hace que no se actualice la pagina al enviar el form
     });
 
 // Funcion para generar un id unico
@@ -76,12 +80,10 @@ function uuidv4() {
     return crypto.randomUUID();
   }
 
-// let producto = new Producto (00,"perro",340,"sexo","www.com")
-
-// productos.push(producto)
+//Traigo los productos del localStorage  
 const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
 
 if (productosLocalStorage) {
     productos = productosLocalStorage;
-    tabla.ShowProducts()
+    tabla.showProducts()
   }
