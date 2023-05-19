@@ -17,7 +17,7 @@ class UI {
       this.editingUserId = null;
     }
   
-    ShowProducts() {
+    showProducts() {
       const listaUsuarios = document.getElementById('lista-usuarios');
       listaUsuarios.querySelector('tbody').innerHTML = '';
       usuarios.forEach((Usuario) => {
@@ -25,13 +25,13 @@ class UI {
         if (Usuario.id === this.editingUserId) {
           tr.innerHTML = `
             <td>
-              <input type="text" id="nombre" placeholder="Nombre del usuario" class="form-control" value="${Usuario.nombre}" required>
+              <input type="text" id="nombre" class="form-control" value="${Usuario.nombre}" required>
             </td>
             <td>
-              <input type="text" id="email" placeholder="ejemplo@mail.com" class="form-control" value="${Usuario.email}">
+              <input type="text" id="email" class="form-control" value="${Usuario.email}">
             </td>
             <td>
-              <input type="password" id="contraseña" placeholder="*******" class="form-control" value="${Usuario.contraseña}">
+              <input type="password" id="contraseña" class="form-control" value="****">
             </td>
             <td>
               <button class="btn btn-primary save" data-id="${Usuario.id}">Guardar</button>
@@ -49,12 +49,12 @@ class UI {
               usuario.email = email;
               usuario.contraseña = contraseña;
               this.editingUserId = null;
-              this.ShowProducts(); // Actualizar la tabla
+              this.showProducts(); // Actualizar la tabla
             }
           });
           tr.querySelector('.cancel').addEventListener('click', () => {
             this.editingUserId = null;
-            this.ShowProducts(); // Actualizar la tabla
+            this.showProducts(); // Actualizar la tabla
           });
         } else {
           tr.innerHTML = `
@@ -68,7 +68,7 @@ class UI {
           `;
           tr.querySelector('.edit').addEventListener('click', (event) => {
             this.editingUserId = event.target.dataset.id;
-            this.ShowProducts(); // Actualizar la tabla
+            this.showProducts(); // Actualizar la tabla
           });
           tr.querySelector('.delete').addEventListener('click', (event) => {
             const userId = event.target.dataset.id;
@@ -78,7 +78,7 @@ class UI {
                 this.editingUserId = null;
               }
               usuarios.splice(index, 1);
-              this.ShowProducts(); // Actualizar la tabla
+              this.showProducts(); // Actualizar la tabla
             }
           });
         }
@@ -115,7 +115,7 @@ document.getElementById('user-form')
     
     console.log(usuarios)
 
-    tabla.ShowProducts() 
+    tabla.showProducts() 
 
 
     const agregarUsuariosForm = document.getElementById("user-form");
@@ -135,7 +135,7 @@ const usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
 
 if (usuariosLocalStorage) {
     usuarios = usuariosLocalStorage;
-    tabla.ShowProducts()
+    tabla.showProducts()
   }
 
 
