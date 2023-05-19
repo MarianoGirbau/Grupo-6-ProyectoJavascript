@@ -21,7 +21,7 @@ class UI {
         listaProductos.querySelector("tbody").innerHTML = '';
         productos.forEach((producto) => {
             const tr = document.createElement("tr");
-            if (producto.id === this.editingProductId) {
+            if (producto.id === this.editingProductId) { //Editar producto, pregunta si editingProductID es distinto de null 
                 tr.innerHTML = `
                   <td>
                     <input type="text" id="nombreEdit" class="form-control" value="${producto.nombre}" required>
@@ -55,7 +55,7 @@ class UI {
                   this.editingProductId = null;
                   this.showProducts(); // Actualizar la tabla
                 });
-              }else {
+              }else { //Mostrar productos
                     console.log(productos)
                     tr.innerHTML = `
                     <td>${producto.nombre}</td>
@@ -67,31 +67,29 @@ class UI {
                     </td>
                     `;
                     tr.querySelector('.edit').addEventListener('click', (event) => {
-                    this.editingProductId = event.target.dataset.id;
+                    this.editingProductId = event.target.dataset.id; //Guarda el id del producto a editar
                     this.showProducts(); // Actualizar la tabla
                     });
+
+                    //Eliminar producto
                     tr.querySelector('.delete').addEventListener('click', (event) => {
-                        const productId = event.target.dataset.id;
+                        const productId = event.target.dataset.id; //Guarda el id del producto a eliminar
                         const index = productos.findIndex((p) => p.id === productId);
-                        if (index !== -1) {
+                        if (index !== -1) { //se fija si encontro un producto con el id
                           if (this.editingProductId === productId) {
                             this.editingproductId = null;
                           }
-                          productos.splice(index, 1);
+                          productos.splice(index, 1); //elimina el producto del arreglo
                           this.showProducts(); // Actualizar la tabla
                         }
                       });
                 }
-                listaProductos.querySelector('tbody').appendChild(tr);   
+                listaProductos.querySelector('tbody').appendChild(tr);  
         
         });
         
         // Guardar los productos en el local storage
         localStorage.setItem("productos", JSON.stringify(productos));
-    }
-
-    deleteProduct(){
-
     }
 
     showMessage(){
