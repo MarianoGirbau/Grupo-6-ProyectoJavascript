@@ -1,3 +1,5 @@
+
+
 let productos = []; //arreglo de productos
 
 class Producto {
@@ -126,6 +128,9 @@ document.getElementById('product-form')
         const descripcion = document.getElementById('descripcion').value
         const imagen = document.getElementById('imagen').value
 
+if(nombre != null && precio != null && descripcion != null && imagen != null){ 
+       
+
         const producto = new Producto(uuidv4(),nombre,precio,descripcion,imagen) //Creo un objeto producto con los datos del formulario
         
         productos.push(producto) //agrego el producto al arreglo de productos
@@ -135,7 +140,23 @@ document.getElementById('product-form')
         tabla.showProducts() //Actualiza la tabla
 
         const agregarProductosForm = document.getElementById("product-form");
-        agregarProductosForm.reset()
+        agregarProductosForm.reset()}
+        
+        else{
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
+        }
+
+        Swal.fire(
+          'Good job!',
+          'You clicked the button!',
+          'success'
+        )
+
         
         event.preventDefault() //hace que no se actualice la pagina al enviar el form
     });
