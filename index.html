@@ -15,27 +15,19 @@
   
     <form class="row g-3 container-fluid" action="./error404.html" method="get">
       <div class="col-xl-6 col-md-6 col-sm-5">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control suscripcion-inputs" pattern="[a-z]{1,10}" title="Largo máximo 15 caracteres" required="" id="nombre">
+        <label for="nombre" class="form-label">Nombre de usuario:</label>
+        <input type="text" class="form-control suscripcion-inputs" pattern="[A-Za-z]{1,10}" title="Largo máximo 15 caracteres" required="" id="nombre">
       </div>
-      <div class="col-xl-6 col-md-6 col-sm-5">
-        <label for="apellido" class="form-label">Apellido</label>
-        <input type="text" class="form-control suscripcion-inputs" pattern="[a-z]{1,10}" title="Largo máximo 15 caracteres" required="" id="apellido">
-      </div>
+    
       <div class="row"></div>
       <div class="col-xl-7 col-md-8 col-sm-7">
-        <label for="email" class="form-label">E-Mail</label>
+        <label for="email" class="form-label">E-Mail:</label>
         <input type="email" class="form-control suscripcion-inputs" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Use el formato ejemplo@ejemplo.com" required="" id="email">
       </div>
       <div class="row"></div>
       <div class="col-xl-6 col-md-6 col-sm-5">
-        <label for="contrasena" class="form-label">Contraseña</label>
-        <input type="password" class="form-control suscripcion-inputs" minlength="8" maxlength="20" pattern="[A-Za-z0-9]+" title="Letras y números. Tamaño mínimo: 8. Tamaño máximo: 20" required="" id="contrasena">
-      </div>
-      <div class="row"></div>
-      <div class="col-xl-7 col-md-6 col-sm-5">
-        <label for="pais" class="form-label">País</label>
-        <input type="text" class="form-control suscripcion-inputs" required="" id="pais">
+        <label for="contrasena" class="form-label">Contraseña:</label>
+        <input type="password" class="form-control suscripcion-inputs" minlength="8" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Una mayuscula,una minuscula y números. Tamaño mínimo: 8. Tamaño máximo: 20" required="" id="contrasena">
       </div>
       <div class="row"></div>
       <div class="col-12">
@@ -57,7 +49,7 @@
 
 
   
-    <script src="Registro.js"></script>
+    <script src="./Agregarform.js"></script>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </body>
