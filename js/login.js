@@ -9,12 +9,12 @@ const loginForm = document.querySelector('#loginForm');
 
     //const usuarioValido = usuarios.find(usuario => usuario.email === email && usuario.contraseña === contraseña)
 
-    const admin = true
-    const usuarioValido = {admin}//para probar
-
+    //const admin = false
+    //const usuarioValido = {admin}//para probar
+    const usuarioValido = false //para probar
 
     if(!usuarioValido){   
-        loginForm.reset();     
+        //loginForm.reset();     
         Swal.fire({
             icon: 'error',
             title: 'Usuario y/o contraseña incorrectos!',
