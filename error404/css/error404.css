@@ -1,0 +1,37 @@
+.BodyChange{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(125deg, #6c5ce7, #a29bfe) ;
+}
+
+.cajaContenedora{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #343434
+}
+
+.fondoImg{
+    margin-top: 10px;
+    font-size: 250px;
+    font-weight: 900;
+    padding: 0;
+    font-weight: 900px ;
+    letter-spacing: 10px;
+    background: url(https://i.ibb.co/23968yN/banner404.jpg) center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    }
+
+.cajaContenedora a{
+    text-decoration: none;
+    background: #e55039aa;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 20px;
+    display: inline-block;
+}
