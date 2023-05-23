@@ -52,21 +52,32 @@
 
 /* carrito */
 
+.container-icon{
+
+    position: relative;
+}
+
 .icon-cart{
+    width: 40px;
+    height: 40px;
     stroke: none;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
 }
 
 
 
-.count.products{
+.count-products{
     position: absolute;
-    top: 55%;
-    right: 0;
+    top: 35%;
+    right: 55;
 
     background-color: black;
     color: aliceblue;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
 
     display: flex;
     justify-content: center;
@@ -75,7 +86,7 @@
 
 }
 
-#conrador-productos{
+#contador-productos{
     font-size: 12px;
 
 }
@@ -140,9 +151,13 @@
 }
 
 .cart-total h3{
-
     font-size: 20px;
     font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .hidden-cart{
