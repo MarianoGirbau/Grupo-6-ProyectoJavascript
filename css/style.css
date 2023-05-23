@@ -1,3 +1,4 @@
+
 /***General***/
 h1{
     color: #dcb2ce !important;
@@ -80,7 +81,7 @@ footer{
     border-color: #dcb2ce !important; 
   }
 
-/**** Cards de ofertas ****/
+/*** Cards de ofertas ***/
 .body {
     background-color: #55379c;
   }
@@ -136,22 +137,14 @@ footer{
     transform: rotate(360deg);
   }}
 
-  /* carousel */
+  /**** Carousel ****/
 
-  .imagenCarousel{
+.imagenCarousel{
     width: 100%;
     height: 400px;
-    object-fit: fill;
-    
 }
 
-.imagen{
-    width: 350px;
-    height: 200px;
-    object-fit: cover;
-}
-
-/* slider */
+/* Slider */
 
 .imagen-slider{
   width: 350px;
