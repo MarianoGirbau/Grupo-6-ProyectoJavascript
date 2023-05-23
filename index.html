@@ -1,9 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlowHardware</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Login</title>
 </head>
 <body>
+    <header>
+        <div class="header">
+            <img src="img/logo.png" alt="logo" />
+          </div>
+    </header>
+    <div class="login">
+        <form name='form-login'>
+    <div class="login">
+        <form name='form-login'>
+    
+            <h1>Iniciar Sesion</h1>
+    
+            <label for="userName">Email</label>
+            <input type="email" id="userName" placeholder="Usuario" required>
+    
+            <label for="userPw">Contraseña</label>
+            <input type="password" id= "userPw" placeholder="Contraseña" required>
+    
+            <div id="remember">
+                <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                       style="display: inline-block;">
+                <label>Recuerdame</label>
+            </div>
+    
+            <input id= "login_btn" type="submit" value="Iniciar Sesion" onclick="check()">
+    
+        </form>
+    </div>
+    </body>
+
+    </html>
