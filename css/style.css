@@ -187,3 +187,35 @@ footer{
         transform: translateX(calc(-200px * 5));
     }
 }
+
+/****Sobre Nosotros****/
+
+.colorfondo{
+  background-color: #6c5ce7 !important; 
+  }
+
+.fach{
+  background-color: rgba(120, 119, 123, 0.3) !important;
+  font-weight: bold !important;
+  border-radius: 0.5em !important;
+  box-shadow: inset 1px 1px 22px 4px rgba(0,0,0,0.85) !important;
+
+}
+
+.colorfondo i{
+  font-size: 25px !important;
+  }
+
+.fotoCircle{
+  overflow: hidden !important;
+  border-radius: 1000px !important;
+}
+
+h1{
+  font-size: 40px !important;
+}
+
+.textjust{
+  text-align: justify !important;
+  line-height: 2em !important;
+}
