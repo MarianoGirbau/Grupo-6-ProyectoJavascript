@@ -1,3 +1,7 @@
+/***General***/
+h1{
+    color: #dcb2ce !important;
+}
 
 /******NavBar******/
 .navegador{
@@ -7,6 +11,7 @@
 
 .buscador{
     border: solid #dcb2ce 2px;
+    padding: 0 !important;
 }
 
 .busqueda{
@@ -50,8 +55,8 @@
     border: solid #dcb2ce 2px !important;
 }
 
-/****Footer****/
 
+/****Footer****/
 footer{
     background-color: #7b4ea1;
     margin-top: auto !important;
@@ -74,3 +79,59 @@ footer{
   .footer-centro{
     border-color: #dcb2ce !important; 
   }
+
+/**** Cards de ofertas ****/
+.body {
+    background-color: #55379c;
+  }
+  
+  .color{
+    color: green ;
+  }
+  
+  .color1{
+  color: red;
+  }
+  
+  .color2{
+  color: blue;
+  }
+  
+  .color3{
+    color: rgb(255, 0, 234);
+  }
+  .color4{
+  color: #fbff01;
+  }
+  
+  .rainbow-border {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  }
+  
+  .rainbow-border::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 10s linear infinite;
+  border-radius: 5px;
+  z-index: -1;
+  }
+  
+  .card {
+  position: relative;
+  z-index: 1;
+  }
+  
+  @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }}
