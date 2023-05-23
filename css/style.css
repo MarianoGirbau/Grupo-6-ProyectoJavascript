@@ -219,3 +219,42 @@ h1{
   text-align: justify !important;
   line-height: 2em !important;
 }
+
+/****Error 404*****/
+
+.BodyChange{
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  min-height: 100vh !important;
+  background-image: linear-gradient(125deg, #6c5ce7, #a29bfe) !important;
+}
+
+.cajaContenedora{
+  width: 100% !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  text-align: center !important;
+  color: #343434 !important;
+}
+
+.fondoImg{
+  margin-top: 10px !important;
+  font-size: 250px !important;
+  padding: 0 !important;
+  font-weight:bolder;
+  letter-spacing: 10px !important;
+  background: url(https://i.ibb.co/23968yN/banner404.jpg) center no-repeat !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-background-clip: text !important;
+  }
+
+.cajaContenedora a{
+  text-decoration: none !important;
+  background: #e55039aa !important;
+  color: #fff !important;
+  padding: 12px 24px !important;
+  border-radius: 20px !important;
+  display: inline-block !important;
+}
