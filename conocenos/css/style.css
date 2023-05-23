@@ -1,0 +1,31 @@
+.colorfondo{
+    background-color: #6c5ce7; 
+    }
+
+.fach{
+    background-color: rgba(120, 119, 123, 0.3);
+    font-weight: bold;
+    border-radius: 0.5em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0,0,0,0.85)
+
+}
+
+.colorfondo i{
+    font-size: 25px;
+    }
+
+.fotoCircle{
+
+    overflow: hidden;
+    border-radius: 1000px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.textjust{
+    text-align: justify;
+    line-height: 2em;
+}
+
