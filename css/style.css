@@ -141,15 +141,13 @@ footer{
 
 .imagenCarousel{
     width: 100%;
-    height: 400px;
-}
+} 
 
 /* Slider */
 
 .imagen-slider{
   width: 350px;
   height: 200px;
-
 }
 
 .slider{
