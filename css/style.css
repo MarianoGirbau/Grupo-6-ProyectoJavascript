@@ -1,0 +1,260 @@
+
+/***General***/
+h1{
+    color: #dcb2ce !important;
+}
+
+/******NavBar******/
+.navegador{
+    background-color: #7b4ea1;
+    opacity: 0.95;
+}
+
+.buscador{
+    border: solid #dcb2ce 2px;
+    padding: 0 !important;
+}
+
+.busqueda{
+    background-color: #725dc2 !important;
+    border: none !important;
+    color: #dcb2ce !important;
+    border-right: solid #dcb2ce 2px !important;
+}
+
+.busqueda::placeholder{
+    color: #dcb2ce !important;
+}
+
+.buscar{
+    color: #dcb2ce !important;
+    background-color: #725dc2 !important;
+}
+
+.offcanvas-header{
+    background-color: #7b4ea1;
+}
+
+.offcanvas-body{
+    background-color: #7b4ea1;
+}
+
+.desplegable{
+    background-color: #725dc2 !important;
+    overflow: hidden;
+}
+
+.dropdown-item{
+    border-left: solid #dcb2ce 1px !important;
+    width: auto;
+}
+
+
+.login{
+    color: #dcb2ce !important;
+    background-color: #725dc2 !important;
+    border: solid #dcb2ce 2px !important;
+}
+
+
+/****Footer****/
+footer{
+    background-color: #7b4ea1;
+    margin-top: auto !important;
+  }
+  
+  .footer-principal{
+    background-color: #7b4ea1;
+    color: #dcb2ce !important;
+  }
+  
+  .footer-principal p {
+    color: #dcb2ce !important;
+  }
+  
+  .footer-secundario{
+    background-color: #725dc2;
+    color: #dcb2ce !important;
+  }
+
+  .footer-centro{
+    border-color: #dcb2ce !important; 
+  }
+
+/*** Cards de ofertas ***/
+.body {
+    background-color: #55379c;
+  }
+  
+  .color{
+    color: green ;
+  }
+  
+  .color1{
+  color: red;
+  }
+  
+  .color2{
+  color: blue;
+  }
+  
+  .color3{
+    color: rgb(255, 0, 234);
+  }
+  .color4{
+  color: #fbff01;
+  }
+  
+  .rainbow-border {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  }
+  
+  .rainbow-border::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 10s linear infinite;
+  border-radius: 5px;
+  z-index: -1;
+  }
+  
+  .card {
+  position: relative;
+  z-index: 1;
+  }
+  
+  @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }}
+
+  /**** Carousel ****/
+
+.imagenCarousel{
+    width: 100%;
+    height: 400px;
+}
+
+/* Slider */
+
+.imagen-slider{
+  width: 350px;
+  height: 200px;
+
+}
+
+.slider{
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+.slider .slide-track{
+    display: flex;
+    animation: scroll 0s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider .slide {
+    width: 200px;
+    margin: 50px;
+
+}
+
+.slider .slide img{
+    width: 100%;
+}
+
+@keyframes scroll{
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 5));
+        transform: translateX(calc(-200px * 5));
+    }
+}
+
+/****Sobre Nosotros****/
+
+.colorfondo{
+  background-color: #6c5ce7 !important; 
+  }
+
+.fach{
+  background-color: rgba(120, 119, 123, 0.3) !important;
+  font-weight: bold !important;
+  border-radius: 0.5em !important;
+  box-shadow: inset 1px 1px 22px 4px rgba(0,0,0,0.85) !important;
+
+}
+
+.colorfondo i{
+  font-size: 25px !important;
+  }
+
+.fotoCircle{
+  overflow: hidden !important;
+  border-radius: 1000px !important;
+}
+
+h1{
+  font-size: 40px !important;
+}
+
+.textjust{
+  text-align: justify !important;
+  line-height: 2em !important;
+}
+
+/****Error 404*****/
+
+.BodyChange{
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  min-height: 100vh !important;
+  background-image: linear-gradient(125deg, #6c5ce7, #a29bfe) !important;
+}
+
+.cajaContenedora{
+  width: 100% !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  text-align: center !important;
+  color: #343434 !important;
+}
+
+.fondoImg{
+  margin-top: 10px !important;
+  font-size: 250px !important;
+  padding: 0 !important;
+  font-weight:bolder;
+  letter-spacing: 10px !important;
+  background: url(https://i.ibb.co/23968yN/banner404.jpg) center no-repeat !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-background-clip: text !important;
+  }
+
+.cajaContenedora a{
+  text-decoration: none !important;
+  background: #e55039aa !important;
+  color: #fff !important;
+  padding: 12px 24px !important;
+  border-radius: 20px !important;
+  display: inline-block !important;
+}
