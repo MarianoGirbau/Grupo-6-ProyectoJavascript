@@ -16,7 +16,7 @@ class UI {
   }
 
   showProducts() {
-    const listaProductos = document.getElementById("lista-productos");
+    const listaProductos = document.getElementById("productos");
     listaProductos.querySelector("tbody").innerHTML = "";
     productos.forEach((producto) => {
       const tr = document.createElement("tr");
@@ -57,7 +57,6 @@ class UI {
         });
       } else {
         //Mostrar productos
-        console.log(productos);
         tr.innerHTML = `
                     <td>${producto.nombre}</td>
                     <td>${producto.precio}</td>
@@ -74,7 +73,8 @@ class UI {
 
         //Eliminar producto
         tr.querySelector(".delete").addEventListener("click", (event) => {
-          Swal.fire({
+          
+          Swal.fire({ //alerta de borrado
             title: "Seguro que desea borrar el producto?",
             
             icon: "warning",
