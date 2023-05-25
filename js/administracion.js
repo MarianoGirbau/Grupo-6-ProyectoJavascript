@@ -112,86 +112,48 @@ class UI {
 
 //Eventos DOM
 
-//Agregar Productos Predefinidos
-
-function productosCargados() {
-  const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
-  if (!productosLocalStorage) {
-    let producto1 = new Producto(
-      uuidv4(),
-      "Msi Rtx 3060 Ventus",
-      200000,
-      "La GeForce RTX 3060 te permite enfrentarte a los juegos más recientes utilizando la potencia de Ampere.",
-      "https://i.ibb.co/3zP7r9V/ryzen3600.webp"
-    );
-    let producto2 = new Producto(
-      uuidv4(),
-      "Procesador Amd Ryzen 5-3600x",
-      100000,
-      "Termina tu trabajo a toda velocidad y sin esfuerzo con los procesadores Ryzen 5 de tercera generación.",
-      "https://i.ibb.co/3zP7r9V/ryzen3600.webp"
-    );
-    let producto3 = new Producto(
-      uuidv4(),
-      "Mother B450m Pro-vdh Max",
-      52767,
-      "Placa base AMD AM4 inspirada en el diseño arquitectónico, con Core Boost, DDR4 Boost, Audio Boost, Turbo M.2.",
-      "https://i.ibb.co/kcPTCCr/mothermsi.jpg"
-    );
-    let producto4 = new Producto(
-      uuidv4(),
-      "Memoria ram Hyper x Fury",
-      29720,
-      "Tecnología DDR4 SDRAM. Memoria con formato UDIMM. Alcanza una velocidad de 2666MHz.",
-      "https://i.ibb.co/SJ5Whx6/memoriaram.jpg"
-    );
-
-    productos.push(producto1, producto2, producto3, producto4); //agrego los productos al arreglo
-
-    localStorage.setItem("productos", JSON.stringify(productos)); // agrego el arreglo al localStorage
-  }
-}
-
 //Agregar Nuevos Productos
 let tabla = new UI();
 
-document
-  .getElementById("product-form")
-  .addEventListener("submit", function (event) {
-    /* Obtengo los valores escritos en el formulario */
-    const nombre = document.getElementById("nombre").value;
-    const precio = document.getElementById("precio").value;
-    const descripcion = document.getElementById("descripcion").value;
-    const imagen = document.getElementById("imagen").value;
-
-    if (nombre != "" && precio != "" && descripcion != "" && imagen != "") {
-      const producto = new Producto(
-        uuidv4(),
-        nombre,
-        precio,
-        descripcion,
-        imagen
-      ); //Creo un objeto producto con los datos del formulario
-
-      productos.push(producto); //agrego el producto al arreglo de productos
-
-      console.log(productos);
-
-      tabla.showProducts(); //Actualiza la tabla
-
-      const agregarProductosForm = document.getElementById("product-form");
-      agregarProductosForm.reset();
-
-      Swal.fire("Producto cargado correctamente!", "", "success");
-    } else {
-      Swal.fire({
-        icon: "error",
-        title: "Algo salió mal!",
+if(window.location.pathname === "/html/administracion.html"){ //pregunta si está en la pagina de administracion
+    document
+      .getElementById("product-form")
+      .addEventListener("submit", function (event) {
+        /* Obtengo los valores escritos en el formulario */
+        const nombre = document.getElementById("nombre").value;
+        const precio = document.getElementById("precio").value;
+        const descripcion = document.getElementById("descripcion").value;
+        const imagen = document.getElementById("imagen").value;
+    
+        if (nombre != "" && precio != "" && descripcion != "" && imagen != "") {
+          const producto = new Producto(
+            uuidv4(),
+            nombre,
+            precio,
+            descripcion,
+            imagen
+          ); //Creo un objeto producto con los datos del formulario
+    
+          productos.push(producto); //agrego el producto al arreglo de productos
+    
+          console.log(productos);
+    
+          tabla.showProducts(); //Actualiza la tabla
+    
+          const agregarProductosForm = document.getElementById("product-form");
+          agregarProductosForm.reset();
+    
+          Swal.fire("Producto cargado correctamente!", "", "success");
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Algo salió mal!",
+          });
+        }
+    
+        event.preventDefault(); //hace que no se actualice la pagina al enviar el form
       });
-    }
-
-    event.preventDefault(); //hace que no se actualice la pagina al enviar el form
-  });
+}
 
 // Funcion para generar un id unico
 
@@ -199,13 +161,12 @@ function uuidv4() {
   return crypto.randomUUID();
 }
 
-//Cargo los productos
-productosCargados();
-
 //Traigo los productos del localStorage
 const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
 
-if (productosLocalStorage) {
+console.log(window.location.pathname)
+
+if (productosLocalStorage) { //pregunta si hay productos en localStorage y si está en la pagina de administracion
   productos = productosLocalStorage;
   tabla.showProducts();
 }
