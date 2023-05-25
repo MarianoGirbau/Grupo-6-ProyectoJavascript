@@ -1,1 +1,0 @@
-# Grupo-6-ProyectoJavascript
