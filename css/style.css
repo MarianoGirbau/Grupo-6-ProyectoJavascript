@@ -1,3 +1,8 @@
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+
+
 .modal-title-container {
     display: flex;
     align-items: center;
@@ -24,41 +29,52 @@
 
 
   .modal-content {
-    background-color: #8a55dd;
-    color: #fff;
-  }
+      background-color: #8a55dd;
+      color: #fff;
+    }
 
-  .modal-header {
-    border-bottom: none;
-  }
+    .modal-header {
+      border-bottom: none;
+    }
 
-  .modal-title {
-    color: #fff;
-  }
+    .modal-title {
+      color: #fff;
+    }
 
-  .modal-body {
-    background-color: #a77be7;
-  }
+    .modal-body {
+      background-color: #a77be7;
+    }
 
-  .form-container {
-    padding: 20px;
-  }
+    .form-container {
+      padding: 20px;
+    }
 
-  .form-group label {
-    color: #fff;
-  }
+    .form-group label {
+      color: #fff;
+    }
 
-  .btn-primary {
-    background-color: #6f42c1;
-    border-color: #6f42c1;
-  }
+    .btn-primary {
+      background-color: #6f42c1;
+      border-color: #6f42c1;
+    }
 
-  .btn-primary:hover {
-    background-color: #58379a;
-    border-color: #58379a;
-  }
+    .btn-primary:hover {
+      background-color: #58379a;
+      border-color: #58379a;
+    }
 
-  .close {
-    color: #fff;
-  }
+    .close {
+      color: #fff;
+    }
 
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 24px;
+    }
