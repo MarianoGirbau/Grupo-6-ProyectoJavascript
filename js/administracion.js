@@ -55,7 +55,7 @@ class UI {
                         <button class="btn btn-danger delete" data-id="${producto.id}">Eliminar</button>
                     </td>
                     `;
-        tr.querySelector(".edit").addEventListener("click", (event) => {
+          tr.querySelector(".edit").addEventListener("click", (event) => {
           this.editingProductId = event.target.dataset.id; //Guarda el id del producto a editar
           this.showProducts(); // Actualizar la tabla
         });
@@ -109,6 +109,7 @@ if (productosLocalStorage) { //pregunta si hay productos en localStorage
   productos = productosLocalStorage;
   tabla.showProducts();
 }
+
 document
 .getElementById("product-form")
 .addEventListener("submit", function (event) {
