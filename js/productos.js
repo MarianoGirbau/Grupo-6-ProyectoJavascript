@@ -1,3 +1,15 @@
+let productos = []; //arreglo de productos
+
+export class Producto {
+  constructor(id, nombre, precio, descripcion, imagen) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.descripcion = descripcion;
+    this.imagen = imagen;
+  }
+}
+
 //Agregar Productos Predefinidos
 function productosCargados() {
     const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
@@ -7,7 +19,7 @@ function productosCargados() {
         "Msi Rtx 3060 Ventus",
         200000,
         "La GeForce RTX 3060 te permite enfrentarte a los juegos más recientes utilizando la potencia de Ampere.",
-        "https://i.ibb.co/3zP7r9V/ryzen3600.webp"
+        "https://i.ibb.co/yRxGqM1/msi3060.webp"
       );
       let producto2 = new Producto(
         uuidv4(),
@@ -37,27 +49,8 @@ function productosCargados() {
     }
   }
 
-  const productosLocalStorage = JSON.parse(localStorage.getItem("productos"))
-  console.log(productosLocalStorage)
+  function uuidv4() {
+    return crypto.randomUUID();
+  }
 
-  productosCargados()
-
-  // const listaProductos = document.getElementById("productos");
-  // productosLocalStorage.forEach((producto) => {
-  //   listaProductos.innerHTML= `
-  //   <div class="col-md-4">
-  //       <div class="card mb-4" style="border: 5px solid #ccc;">
-  //           <img src="${producto.imagen}" class="card-img-top" alt="Producto 1">
-  //           <div class="card-body">
-  //               <h5 class="card-title">${producto.nombre}</h5>
-  //               <p class="card-text">${producto.descripcion}</p>
-  //               <p class="card-text font-weight-bold" style="color: rgb(226, 124, 0);">$${producto.precio}</p>
-  //               <div class="text-center">
-  //                   <a href="#" class="btn btn-primary">Comprar</a>
-  //               </div>
-  //           </div>
-  //       </div>
-  //   </div>
-  //   `
-  // })
-
+  productosCargados();

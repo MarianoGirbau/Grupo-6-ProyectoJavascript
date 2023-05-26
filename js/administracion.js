@@ -1,22 +1,11 @@
-let productos = []; //arreglo de productos
-
-class Producto {
-  constructor(id, nombre, precio, descripcion, imagen) {
-    this.id = id;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.descripcion = descripcion;
-    this.imagen = imagen;
-  }
-}
-
+import { Producto } from "./productos.js";
 class UI {
   constructor() {
     this.editingProductId = null;
   }
 
   showProducts() {
-    const listaProductos = document.getElementById("productos");
+    const listaProductos = document.getElementById("lista-productos");
     listaProductos.querySelector("tbody").innerHTML = "";
     productos.forEach((producto) => {
       const tr = document.createElement("tr");
@@ -106,54 +95,57 @@ class UI {
     // Guardar los productos en el local storage
     localStorage.setItem("productos", JSON.stringify(productos));
   }
-
-  showMessage() {}
 }
 
 //Eventos DOM
 
 //Agregar Nuevos Productos
 let tabla = new UI();
+let productos = [];
+//Traigo los productos del localStorage
+const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
 
-if(window.location.pathname === "/html/administracion.html"){ //pregunta si está en la pagina de administracion
-    document
-      .getElementById("product-form")
-      .addEventListener("submit", function (event) {
-        /* Obtengo los valores escritos en el formulario */
-        const nombre = document.getElementById("nombre").value;
-        const precio = document.getElementById("precio").value;
-        const descripcion = document.getElementById("descripcion").value;
-        const imagen = document.getElementById("imagen").value;
-    
-        if (nombre != "" && precio != "" && descripcion != "" && imagen != "") {
-          const producto = new Producto(
-            uuidv4(),
-            nombre,
-            precio,
-            descripcion,
-            imagen
-          ); //Creo un objeto producto con los datos del formulario
-    
-          productos.push(producto); //agrego el producto al arreglo de productos
-    
-          console.log(productos);
-    
-          tabla.showProducts(); //Actualiza la tabla
-    
-          const agregarProductosForm = document.getElementById("product-form");
-          agregarProductosForm.reset();
-    
-          Swal.fire("Producto cargado correctamente!", "", "success");
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Algo salió mal!",
-          });
-        }
-    
-        event.preventDefault(); //hace que no se actualice la pagina al enviar el form
-      });
+if (productosLocalStorage) { //pregunta si hay productos en localStorage
+  productos = productosLocalStorage;
+  tabla.showProducts();
 }
+document
+.getElementById("product-form")
+.addEventListener("submit", function (event) {
+  /* Obtengo los valores escritos en el formulario */
+  const nombre = document.getElementById("nombre").value;
+  const precio = document.getElementById("precio").value;
+  const descripcion = document.getElementById("descripcion").value;
+  const imagen = document.getElementById("imagen").value;
+
+  if (nombre != "" && precio != "" && descripcion != "" && imagen != "") {
+    const producto = new Producto(
+      uuidv4(),
+      nombre,
+      precio,
+      descripcion,
+      imagen
+    ); //Creo un objeto producto con los datos del formulario
+
+    productos.push(producto); //agrego el producto al arreglo de productos
+
+    console.log(productos);
+
+    tabla.showProducts(); //Actualiza la tabla
+
+    const agregarProductosForm = document.getElementById("product-form");
+    agregarProductosForm.reset();
+
+    Swal.fire("Producto cargado correctamente!", "", "success");
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Algo salió mal!",
+    });
+  }
+
+  event.preventDefault(); //hace que no se actualice la pagina al enviar el form
+});
 
 // Funcion para generar un id unico
 
@@ -161,12 +153,3 @@ function uuidv4() {
   return crypto.randomUUID();
 }
 
-//Traigo los productos del localStorage
-const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
-
-console.log(window.location.pathname)
-
-if (productosLocalStorage) { //pregunta si hay productos en localStorage y si está en la pagina de administracion
-  productos = productosLocalStorage;
-  tabla.showProducts();
-}

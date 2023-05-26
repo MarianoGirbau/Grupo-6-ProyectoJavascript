@@ -207,68 +207,12 @@
 
 
   <!-- CONTENEDOR PRODUCTOS -->
-  <div class="container" id="productos">
+  <div class="container" >
     <h1 class="text-center">Productos</h1>
 
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-4" style="border: 5px solid #ccc;">
-          <img src="https://i.ibb.co/3zP7r9V/ryzen3600.webp" class="card-img-top" alt="Producto 1">
-          <div class="card-body">
-            <h5 class="card-title">Procesador Amd Ryzen 5-3600x</h5>
-            <p class="card-text">Termina tu trabajo a toda velocidad y sin esfuerzo con los procesadores Ryzen 5 de
-              tercera generación.</p>
-            <p class="card-text font-weight-bold" style="color: rgb(226, 124, 0);">$100.000</p>
-            <div class="text-center">
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4" style="border: 5px solid #ccc;">
-          <img src="https://i.ibb.co/yRxGqM1/msi3060.webp" class="card-img-top" alt="Producto 2">
-          <div class="card-body">
-            <h5 class="card-title">Msi Rtx 3060 Ventus</h5>
-            <p class="card-text">La GeForce RTX 3060 te permite enfrentarte a los juegos más recientes utilizando la
-              potencia de Ampere.</p>
-            <p class="card-text font-weight-bold" style="color: rgb(226, 124, 0);">$200.000</p>
-            <div class="text-center">
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4" style="border: 5px solid #ccc;">
-          <img src="https://i.ibb.co/kcPTCCr/mothermsi.jpg" class="card-img-top" alt="Producto 3">
-          <div class="card-body">
-            <h5 class="card-title">Mother B450m Pro-vdh Max</h5>
-            <p class="card-text">Placa base AMD AM4 inspirada en el diseño arquitectónico, con Core Boost, DDR4 Boost...</p>
-            <p class="card-text font-weight-bold" style="color: rgb(226, 124, 0);">$52.767</p>
-            <div class="text-center">
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4" style="border: 5px solid #ccc;">
-          <img src="https://i.ibb.co/SJ5Whx6/memoriaram.jpg" class="card-img-top" alt="Producto 4">
-          <div class="card-body">
-            <h5 class="card-title">Memoria ram Hyper x Fury</h5>
-            <p class="card-text">Tecnología DDR4 SDRAM. Memoria con formato UDIMM. Alcanza una velocidad de 2666MHz.</p>
-            <p class="card-text font-weight-bold" style="color: rgb(226, 124, 0);">$29.7201</p>
-            <div class="text-center">
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="row" id="productos">
+      <!-- AQUI SE GENERAN LOS PRODUCTOS -->
+    </div> 
   </div>
 
   <!--inicio slider infinito-->
@@ -306,7 +250,7 @@
 
   <!-- Fin slider infinito -->
 
-  <!-- Scripts -->
+  <!-- SCRIPTS -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -315,7 +259,8 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script> <!-- Sweet Alert -->
 
   <script src="./js/login.js"></script>
-  <script src="./js/productos.js" type="module"></script>
+  <script src="./js/productos.js"></script>
+  <script src="./js/generarProductos.js"></script>
 
 </body>
 
