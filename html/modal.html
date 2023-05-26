@@ -38,14 +38,13 @@
             <div class="form-container">
               <form id="loginForm">
                 <div class="form-group">
-                  <label for="username">Usuario:</label>
+                  <label for="email">Email:</label>
                   <input
-                    type="text"
+                    type="email"
                     class="form-control"
-                    pattern="[A-Za-z]{1,10}"
-                    title="Largo máximo 15 caracteres"
-                    id="username"
-                    placeholder="Introduce tu usuario"
+                    title="Introduce un email valido"
+                    id="email"
+                    placeholder="Introduce tu email"
                   />
                 </div>
                 <div class="form-group">
@@ -53,10 +52,7 @@
                   <input
                     type="password"
                     class="form-control"
-                    minlength="8"
                     maxlength="20"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    title="Una mayuscula,una minuscula y números. Tamaño mínimo: 8. Tamaño máximo: 20"
                     id="password"
                     placeholder="Introduce tu contraseña"
                   />
@@ -85,5 +81,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
   </body>
 </html>
