@@ -1,4 +1,4 @@
-export class Producto { //hace falta la palabra default para hacer el export
+export class Producto {
   constructor(id, nombre, precio, descripcion, imagen) {
     this.id = id;
     this.nombre = nombre;

@@ -1,7 +1,7 @@
 import { Producto } from "./productos.js";
 class UI {
   constructor() {
-    this.editingProductId = null;
+    this.editingProductId = null; //para saber si estoy editando
   }
 
   showProducts() {
@@ -99,9 +99,9 @@ class UI {
 
 //Eventos DOM
 
-//Agregar Nuevos Productos
 let tabla = new UI();
 let productos = [];
+
 //Traigo los productos del localStorage
 const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
 
@@ -110,6 +110,7 @@ if (productosLocalStorage) { //pregunta si hay productos en localStorage
   tabla.showProducts();
 }
 
+//Agregar Nuevos Productos
 document
 .getElementById("product-form")
 .addEventListener("submit", function (event) {
@@ -149,7 +150,6 @@ document
 });
 
 // Funcion para generar un id unico
-
 function uuidv4() {
   return crypto.randomUUID();
 }
