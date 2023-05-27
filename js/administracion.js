@@ -64,7 +64,7 @@ class UI {
         tr.querySelector(".delete").addEventListener("click", (event) => {
           
           Swal.fire({ //alerta de borrado
-            title: "Seguro que desea borrar el producto?",
+            title: "Seguro que desea eliminar éste producto?",
             
             icon: "warning",
             showCancelButton: true,
