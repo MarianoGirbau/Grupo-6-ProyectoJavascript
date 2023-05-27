@@ -32,6 +32,7 @@ const loginForm = document.querySelector('#loginForm');
             })
         setTimeout(function(){
             document.getElementById("boton-adm").style = "display: block;"
+            document.getElementById("boton-usu").style = "display: block;"
         }, 1000);           
     }else if (!usuarioValido.admin){        
         localStorage.setItem('login_exitoso', JSON.stringify(usuarioValido))    
