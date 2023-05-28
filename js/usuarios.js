@@ -147,11 +147,33 @@ document.getElementById('user-form')
 
 
 function uuidv4() {
-    return crypto.randomUUID();
-  }
+  return crypto.randomUUID();
+}
 
-
+//Traigo los usuarios del localStorage
 const usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
+
+
+function usuariosCargados() {
+  console.log(usuariosLocalStorage)
+  if (!usuariosLocalStorage) {
+      
+    let admin = new Usuario(
+      uuidv4(),
+      "admin",
+      "admin@admin.com",
+      "admin",
+      true
+    );
+      
+    usuarios.push(admin); //agrego el admin al arreglo
+    console.log(usuarios)
+    localStorage.setItem("usuarios", JSON.stringify(usuarios)); // agrego el arreglo al localStorage
+  }
+}
+
+//Genero el usuario admin
+usuariosCargados()
 
 if (usuariosLocalStorage) {
     usuarios = usuariosLocalStorage;

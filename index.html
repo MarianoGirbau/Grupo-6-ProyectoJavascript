@@ -53,10 +53,10 @@
 
               </ul>
             </li>
-            <li class="nav-item" id="boton-adm" style="display: block;">
+            <li class="nav-item" id="boton-adm" style="display: none;">
               <a class="nav-link" href="./html/administracion.html" alt="Enlace a Administrar">ADMINISTRACION</a>
             </li>
-            <li class="nav-item" id="boton-usu" style="display: block;">
+            <li class="nav-item" id="boton-usu" style="display: none;">
               <a class="nav-link" href="./html/usuarios.html" alt="Enlace a Usuarios">USUARIOS</a>
             </li>
 
@@ -83,7 +83,8 @@
             fill="#dcb2ce" />
         </svg>
       </a>
-      <button onclick="login()" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" href="#" role="button">Login</button> <!-- CAMBIAR -->
+      <button onclick="login()" id="boton-login" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" href="#" role="button">Login</button> <!-- CAMBIAR -->
+      <button onclick="logout()" id="boton-logout" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" style="display: none;" href="#" role="button">Logout</button> <!-- CAMBIAR -->
     </div>
   </nav>
 </header>
