@@ -17,15 +17,15 @@
                     </div>
                     <form action="" id="user-form" class="card-body">
                         <div class="mb-3">
-                            <input type="text" id="nombre" placeholder="Nombre del usuario" class="form-control" required>
+                            <input type="text" id="nombre" placeholder="Nombre del usuario" class="form-control" maxlength="20" required>
                         </div>
                         
                         <div class="mb-3">
-                            <input type="text" id="email" placeholder="ejemplo@mail.com" class="form-control" >
+                            <input type="text" id="email" placeholder="ejemplo@mail.com" class="form-control" maxlength="20" required>
                         </div>
 
                         <div class="mb-3">
-                            <input type="password" id="contraseña" placeholder="*******" class="form-control" >
+                            <input type="password" id="contraseña" placeholder="*******" class="form-control" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" maxlength="20" required>
                         </div>
 
                         <input type="submit" value="Guardar" class="btn btn-primary col-12">
