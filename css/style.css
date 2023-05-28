@@ -1,7 +1,12 @@
 
 /***General***/
 h1{
-    color: #dcb2ce !important;
+    color: #e0d7dd !important;
+    text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    background: #000000;
+    background: linear-gradient(to bottom, #000000, #8c8c8c);
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 /******NavBar******/
