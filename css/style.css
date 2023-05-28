@@ -297,7 +297,7 @@ h1{
   color: rgb(44, 34, 91);
 }
 
-.btn-primary {
+.btn-agregar {
   background-color: rgb(128, 116, 191);
   border: none;
   border-radius: 5px;
@@ -306,7 +306,7 @@ h1{
   cursor: pointer;
 }
 
-.btn-primary:hover {
+.btn-agregar:hover {
   background-color: rgb(84, 73, 135);
 }
 
@@ -347,4 +347,82 @@ textarea:required:focus {
 .titulo-blanco-llamativo {
   color: white;
   background-color: rgb(84, 73, 135) !important ; /* Puedes ajustar el color de fondo a tu gusto */
+}
+
+
+/* ESTILOS DE MODAL */
+
+.modal-title-container {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.modal-title img {
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: 10px !important;
+}
+
+.modal-header .logo-container {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.modal-header .logo-container img {
+  width: 80px !important;
+  height: 40px !important;
+  margin-right: 50px !important;
+}
+
+.modal-content {
+  background-color: #8a55dd !important;
+  color: #fff !important;
+}
+
+.modal-header {
+  border-bottom: none !important;
+}
+
+.modal-title {
+  color: #fff !important;
+}
+
+.modal-body {
+  background-color: #a77be7 !important;
+}
+
+.form-container {
+  padding: 20px !important;
+}
+
+.form-group label {
+  color: #fff !important;
+}
+
+.btn-modal {
+  background-color: #6f42c1 !important;
+  border-color: #6f42c1 !important;
+}
+
+.btn-modal:hover {
+  background-color: #58379a !important;
+  border-color: #58379a !important;
+}
+
+.close {
+  color: #fff !important;
+}
+
+/* ESTILO DE ICONOS */
+
+.social-icons {
+  display: flex !important;
+  justify-content: center !important; 
+  margin-top: 20px !important;
+}
+
+.social-icons a {
+  margin: 0 10px !important;
+  color: #fff !important;
+  font-size: 24px !important;
 }

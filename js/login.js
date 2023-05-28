@@ -1,4 +1,3 @@
-
 //Control de sesion
 const sesion = JSON.parse(localStorage.getItem('sesion')) || false
 if(!sesion){

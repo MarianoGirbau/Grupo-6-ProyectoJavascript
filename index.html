@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <title>FlowHardware</title>
 </head>
 <header class="sticky-top">
@@ -83,23 +84,77 @@
             fill="#dcb2ce" />
         </svg>
       </a>
-      <button onclick="login()" id="boton-login" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" href="#" role="button">Login</button> <!-- CAMBIAR -->
-      <button onclick="logout()" id="boton-logout" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" style="display: none;" href="#" role="button">Logout</button> <!-- CAMBIAR -->
+      <!-- <button onclick="login()" id="boton-login" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" href="#" role="button">Login</button> CAMBIAR -->
+      <button type="button" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" data-bs-toggle="modal"
+        data-bs-target="#myModal" role="button">Login</button>
+      <button onclick="logout()" id="boton-logout" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" style="display: none;"
+        href="#" role="button">Logout</button> <!-- CAMBIAR -->
     </div>
   </nav>
 </header>
 
 <body class="body">
+  <!-- MODAL -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="logo-container">
+            <a href=""><img src="./src/Logo.png" alt="Logo" /></a>
+          </div>
+          <h4 class="modal-title">Login FlowHardware</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-container">
+            <form id="loginForm">
+              <div class="pb-3">
+                <label for="email" class="pb-2">Email:</label>
+                <input type="email" class="form-control" title="Introduce un email valido" id="email"
+                  placeholder="Introduce tu email" />
+              </div>
+              <div class="pb-3">
+                <label for="password" class="pb-2">Contraseña:</label>
+                <input type="password" class="form-control" maxlength="20" id="password"
+                  placeholder="Introduce tu contraseña" />
+              </div>
+              <div class="container-fluid d-flex justify-content-center px-0">
+                <button type="submit" class="btn btn-primary btn-modal m-0 w-100">
+                  Login
+                </button>
+              </div>
+            </form>
+            <p class="text-center pt-2">No tienes una cuenta?</p> <i
+              class="bi bi-arrow-down-circle d-flex justify-content-center align-items-center"></i>
+
+            <div class="container-fluid d-flex justify-content-center mt-1 px-0">
+              <button type="submit" class="btn btn-primary btn-modal m-0 w-100">
+                Registrate
+              </button>
+            </div>
+
+            <hr>
+          
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-google"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Inicio Carrusel prueba -->
   <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="imagenCarousel" src="./src/imagenesCarousel/intel.jpg" class="d-block w-100"
-          alt="...">
+        <img class="imagenCarousel" src="./src/imagenesCarousel/intel.jpg" class="d-block w-100" alt="...">
       </div>
-       <div class="carousel-item">
-        <img class="imagenCarousel" src="./src/imagenesCarousel/hyperex.jpg" class="d-block w-100"
-          alt="...">
+      <div class="carousel-item">
+        <img class="imagenCarousel" src="./src/imagenesCarousel/hyperex.jpg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
         <img class="imagenCarousel" src="./src/imagenesCarousel/palit.jpg" class="d-block w-100" alt="...">
@@ -211,12 +266,12 @@
 
 
   <!-- CONTENEDOR PRODUCTOS -->
-  <div class="container" >
+  <div class="container">
     <h1 class="text-center">Productos</h1>
 
     <div class="row" id="productos">
       <!-- AQUI SE GENERAN LOS PRODUCTOS -->
-    </div> 
+    </div>
   </div>
 
   <!--inicio slider infinito-->
