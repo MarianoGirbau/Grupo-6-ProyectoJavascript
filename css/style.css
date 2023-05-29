@@ -245,8 +245,9 @@ footer{
 }
 
 .fondoImg{
+  font-family: var();
   margin-top: 10px !important;
-  font-size: 250px !important;
+  font-size: 150px !important;
   padding: 0 !important;
   font-weight:bolder;
   letter-spacing: 10px !important;
