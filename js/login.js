@@ -21,18 +21,13 @@ if(!sesion){
 
 const loginForm = document.querySelector('#loginForm');
 
-// loginForm.addEventListener('submit', (e)=>{
-    const login = () => {
-    //e.preventDefault()
-    //const email = document.querySelector('#email').value
-    //const contraseña = document.querySelector('#contraseña').value
-    //const usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
+loginForm.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    const email = document.querySelector('#email').value
+    const contraseña = document.querySelector('#contraseña').value
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 
-    //const usuarioValido = usuarios.find(usuario => usuario.email === email && usuario.contraseña === contraseña)
-
-    //const admin = false
-    //const usuarioValido = {admin}//para probar
-    const usuarioValido = true //para probar
+    const usuarioValido = usuarios.find(usuario => usuario.email === email && usuario.contraseña === contraseña)
 
     if(!usuarioValido){   
         //loginForm.reset();     
@@ -48,7 +43,7 @@ const loginForm = document.querySelector('#loginForm');
         Swal.fire({
             position: 'top',
             icon: 'success',
-            title: `Bienvenido ${usuarioValido.name}`,
+            title: `Bienvenido ${usuarioValido.nombre}`,
             showConfirmButton: false
             })
         setTimeout(function(){
@@ -56,13 +51,14 @@ const loginForm = document.querySelector('#loginForm');
             document.getElementById("boton-usu").style = "display: block;"
             document.getElementById("boton-login").style = "display: none;"
             document.getElementById("boton-logout").style = "display: block;"
+            location.reload();
         }, 1000);           
     }else if (!usuarioValido.admin){        
         localStorage.setItem('sesion', JSON.stringify(usuarioValido)) //guardo la sesion en el LS  
         Swal.fire({
             position: 'top',
             icon: 'success',
-            title: `Bienvenido ${usuarioValido.name}`,
+            title: `Bienvenido ${usuarioValido.nombre}`,
             showConfirmButton: false
             })
         setTimeout(function(){
@@ -70,6 +66,29 @@ const loginForm = document.querySelector('#loginForm');
             document.getElementById("boton-usu").style = "display: none;"
             document.getElementById("boton-login").style = "display: none;"
             document.getElementById("boton-logout").style = "display: block;"
-        }, 1000);             
+            location.reload();
+        }, 1000);           
     }
-};
+});
+
+function logout() {
+    Swal.fire({
+        icon: 'warning',
+        title: 'Cerrar Sesión?',
+        showCancelButton: true,
+        confirmButtonText: 'Aceptar', 
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: '#C10001',
+        cancelButtonColor: '#9A9693',
+        background: '#31302F',
+        color: 'white',
+        backdrop: `rgba(0,0,14,0.4)` 
+      }).then((result) => {        
+        if (result.isConfirmed) {
+            localStorage.removeItem('sesion')
+            location.reload();
+        } else if (result.isDenied) {
+          return
+        }
+      })
+}

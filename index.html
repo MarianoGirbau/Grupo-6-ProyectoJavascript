@@ -84,11 +84,10 @@
             fill="#dcb2ce" />
         </svg>
       </a>
-      <!-- <button onclick="login()" id="boton-login" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" href="#" role="button">Login</button> CAMBIAR -->
-      <button type="button" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" data-bs-toggle="modal"
+      <button type="button" id="boton-login" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" data-bs-toggle="modal"
         data-bs-target="#myModal" role="button">Login</button>
       <button onclick="logout()" id="boton-logout" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" style="display: none;"
-        href="#" role="button">Logout</button> <!-- CAMBIAR -->
+        href="#" role="button">Logout</button>
     </div>
   </nav>
 </header>
@@ -114,8 +113,8 @@
                   placeholder="Introduce tu email" />
               </div>
               <div class="pb-3">
-                <label for="password" class="pb-2">Contraseña:</label>
-                <input type="password" class="form-control" maxlength="20" id="password"
+                <label for="contraseña" class="pb-2">Contraseña:</label>
+                <input type="password" class="form-control" maxlength="20" id="contraseña"
                   placeholder="Introduce tu contraseña" />
               </div>
               <div class="container-fluid d-flex justify-content-center px-0">
@@ -134,7 +133,7 @@
             </div>
 
             <hr>
-          
+
             <div class="social-icons">
               <a href="#"><i class="bi bi-facebook"></i></a>
               <a href="#"><i class="bi bi-google"></i></a>
@@ -320,6 +319,7 @@
   <script src="./js/login.js"></script>
   <script src="./js/productos.js"></script>
   <script src="./js/generarProductos.js" type="module"></script>
+  <script src="./js/generarUsuarios.js" type="module"></script>
 
 </body>
 

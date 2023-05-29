@@ -4,6 +4,10 @@ h1{
     color: #dcb2ce !important;
 }
 
+body {
+  min-height: 100vh !important;
+}
+
 /******NavBar******/
 .navegador{
     background-color: #7b4ea1;
@@ -199,22 +203,26 @@ footer{
 
 }
 
-.colorfondo i{
-  font-size: 25px !important;
-  }
-
 .fotoCircle{
+  width: 200px !important;
+  height: 200px !important;
   overflow: hidden !important;
-  border-radius: 1000px !important;
+  border-radius: 400px !important;
 }
 
-h1{
-  font-size: 40px !important;
-}
 
 .textjust{
   text-align: justify !important;
   line-height: 2em !important;
+}
+
+.cambiocolor:hover{
+  background: rgba(11,103,123,0.6) !important;
+  transition: all 500ms ease-out !important;
+}
+
+.social-about{
+  width: 200px !important;
 }
 
 /****Error 404*****/
@@ -265,7 +273,7 @@ h1{
 #Adm {
   padding: 20px;
   background-image: url(https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=1920&s=35030b396d08e9b102b5ac3771b0ae22%201920w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=1620&s=29ce59caac33467547cc3d962ddbf862%201620w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=1320&s=24e5ab07cdcf93f70168f0d562a58c7c%201320w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=1020&s=acc4f1bc845f1345c3e276d46aa30ae5%201020w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=960&s=cbb3b5a728dc10f74928da0bc85946c2%20960w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=660&s=43dcd04eca52de1ed4b5a5dc579dca91%20660w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=540&s=5435bea2f01bdcccf3427b2972347f26%20540w);
-  
+  min-height: 100vh;
 }
 
 .agregar {
@@ -325,10 +333,6 @@ th,td {
   padding: 10px;
   text-align: left;
   color: white;
-}
-
-.w-25 {
-  width: 25%;
 }
 
 /* Para resaltar los campos requeridos */
@@ -416,13 +420,14 @@ textarea:required:focus {
 /* ESTILO DE ICONOS */
 
 .social-icons {
-  display: flex !important;
-  justify-content: center !important; 
-  margin-top: 20px !important;
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px;
 }
 
 .social-icons a {
-  margin: 0 10px !important;
-  color: #fff !important;
-  font-size: 24px !important;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
 }
+

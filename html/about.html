@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -61,6 +60,9 @@
             <li class="nav-item" id="boton-adm" style="display: none;">
               <a class="nav-link" href="./administracion.html" alt="Enlace a Administrar">ADMINISTRACION</a>
             </li>
+            <li class="nav-item" id="boton-usu" style="display: none;">
+              <a class="nav-link" href="./usuarios.html" alt="Enlace a Usuarios">USUARIOS</a>
+            </li>
 
             <hr /><!-- Divisor -->
 
@@ -85,207 +87,223 @@
             fill="#dcb2ce" />
         </svg>
       </a>
-      <button onclick="login()" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" href="#" role="button">Login</button>
+      <button type="button" id="boton-login" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" data-bs-toggle="modal"
+        data-bs-target="#myModal" role="button">Login</button>
+      <button onclick="logout()" id="boton-logout" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" style="display: none;"
+        href="#" role="button">Logout</button>
     </div>
   </nav>
 </header>
 
 <body class="colorfondo">
-  
-  <div class="container-fluid vh-100">
+   <!-- MODAL -->
+   <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="logo-container">
+            <a href=""><img src="../src/Logo.png" alt="Logo" /></a>
+          </div>
+          <h4 class="modal-title">Login FlowHardware</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-container">
+            <form id="loginForm">
+              <div class="pb-3">
+                <label for="email" class="pb-2">Email:</label>
+                <input type="email" class="form-control" title="Introduce un email valido" id="email"
+                  placeholder="Introduce tu email" />
+              </div>
+              <div class="pb-3">
+                <label for="contraseña" class="pb-2">Contraseña:</label>
+                <input type="password" class="form-control" maxlength="20" id="contraseña"
+                  placeholder="Introduce tu contraseña" />
+              </div>
+              <div class="container-fluid d-flex justify-content-center px-0">
+                <button type="submit" class="btn btn-primary btn-modal m-0 w-100">
+                  Login
+                </button>
+              </div>
+            </form>
+            <p class="text-center pt-2">No tienes una cuenta?</p> <i
+              class="bi bi-arrow-down-circle d-flex justify-content-center align-items-center"></i>
 
-    <div class="nosotros">
-      <h2 class="text-center my-5">Quienes somos?</h2>
+            <div class="container-fluid d-flex justify-content-center mt-1 px-0">
+              <button type="submit" class="btn btn-primary btn-modal m-0 w-100">
+                Registrate
+              </button>
+            </div>
+
+            <hr>
+
+            <div class="social-icons ">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-google"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- contenedor 1 -->
-    <section class="textjust ">
-      <div class="container overflow-hidden text-center">
-        <div class="row gy-5">
-          <div class="col">
-            <div class="card fach text-body">
-              <div class="card-body ">
-                <p>
-                  Somos un Equipo apasionado por aprender y crecer. <br />
-                  Buscamos soluciones alternativas a la medida de las
-                  necesidades del clientes, persiguiendo la maxima eficiencia.
-                  <br />
-                  Aprovechamos las diversidad y las experiencias de cada uno
-                  para enriqueser los proyectos, poniendo la tecnologia al
-                  alcanse de todos.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-    </section>
-  
-    <div class="container my-5">
-      <hr />
-    </div>
-    <!-- contenedor 2 -->
-  
-    <section class="textjust">
-      <div class="container">
-        <div class="row">
-          <div class="col-4">
-            <div class="card mb-3 colorfondo mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="https://i.ibb.co/1Z4NbXm/Imagen-de-Whats-App-2023-05-15-a-las-23-52-53.jpg"
-                    class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Martin Fernandez</h5>
-  
-                    <div class="d-flex justify-content-evenly">
-                      <i class="bi bi-facebook mt-3"></i>
-                      <i class="bi bi-twitter mt-3"></i>
-                      <i class="bi bi-instagram mt-3"></i>
-                      <i class="bi bi-whatsapp mt-3"></i>
-                    </div>
-  
-  
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-  
-          <div class="col-4">
-            <div class="card mb-3 colorfondo" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="https://i.ibb.co/1Z4NbXm/Imagen-de-Whats-App-2023-05-15-a-las-23-52-53.jpg"
-                    class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Pablo Decima</h5>
-  
-                    <div class="d-flex justify-content-evenly">
-                      <i class="bi bi-facebook mt-3"></i>
-                      <i class="bi bi-twitter mt-3"></i>
-                      <i class="bi bi-instagram mt-3"></i>
-                      <i class="bi bi-whatsapp mt-3"></i>
-                    </div>
-  
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-  
-          <div class="col-4">
-            <div class="card colorfondo mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="https://i.ibb.co/1Z4NbXm/Imagen-de-Whats-App-2023-05-15-a-las-23-52-53.jpg"
-                    class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Daniel Spiner</h5>
-  
-                    <div class="d-flex justify-content-evenly">
-                      <i class="bi bi-facebook mt-3"></i>
-                      <i class="bi bi-twitter mt-3"></i>
-                      <i class="bi bi-instagram mt-3"></i>
-                      <i class="bi bi-whatsapp mt-3"></i>
-                    </div>
-  
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <!-- contenedor 3 -->
-  
-    <section class="textjust">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-3 g-4 d-flex justify-content-around">
-          <div class="col-4">
-  
-  
-  
-            <div class="card mb-3 colorfondo" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="https://i.ibb.co/1Z4NbXm/Imagen-de-Whats-App-2023-05-15-a-las-23-52-53.jpg"
-                    class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Nahuel Bardera</h5>
-  
-                    <div class="d-flex justify-content-evenly">
-                      <i class="bi bi-facebook mt-3"></i>
-                      <i class="bi bi-twitter mt-3"></i>
-                      <i class="bi bi-instagram mt-3"></i>
-                      <i class="bi bi-whatsapp mt-3"></i>
-                    </div>
-  
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-  
-          </div>
-  
-          <div class="col-4">
-  
-  
-  
-  
-            <div class="card mb-3 colorfondo" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-4">
-                  <img src="../src/MarianoGirbau.jpg"
-                    class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Mariano Girbau</h5>
-  
-                    <div class="d-flex justify-content-evenly">
-                      <i class="bi bi-facebook mt-3"></i>
-                      <i class="bi bi-twitter mt-3"></i>
-                      <i class="bi bi-instagram mt-3"></i>
-                      <i class="bi bi-whatsapp mt-3"></i>
-                    </div>
-  
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-  
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
+  <div>
+    <h1 class="text-center my-5">¿Quienes somos?</h1>
+  </div>
+  <!-- contenedor 1 -->
+
+  <div class="container fach text-center p-5">
+    <p>
+      Bienvenido/a a nuestra página web de hardware, el destino perfecto para
+      los entusiastas de la tecnología y los amantes de la informática. Aquí
+      en nuestra tienda online, encontrarás una amplia selección de
+      componentes de hardware de última generación, diseñados para potenciar y
+      mejorar tu experiencia tecnológica.
+      <br />
+    </p>
+    <p>
+      Nuestro catálogo abarca una gran variedad de productos, desde potentes
+      procesadores y tarjetas gráficas de alto rendimiento, hasta placas base
+      confiables, memorias RAM de velocidad sobresaliente y unidades de
+      almacenamiento ultrarrápidas. También ofrecemos periféricos de calidad,
+      como teclados, ratones, monitores y auriculares, que te brindarán una
+      interacción fluida y envolvente con tu equipo.
+    </p>
+    <p>
+      Trabajamos con los principales fabricantes de hardware, lo que nos
+      permite ofrecer productos de calidad excepcional y rendimiento
+      garantizado. Nuestro equipo de expertos está siempre dispuesto a
+      brindarte asesoramiento personalizado y orientación para ayudarte a
+      encontrar la solución perfecta que se ajuste a tus necesidades y
+      presupuesto.
+    </p>
+  </div>
+
+  <div class="container my-5">
+    <hr />
+  </div>
+
+  
+
+  <div class="container d-flex flex-wrap justify-content-center">
+    <!-- contenedor 1 -->
+    <div class="d-flex mx-5 my-4">
+      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
+        <div class="d-flex justify-content-center mt-4">
+          <img
+            src="https://i.ibb.co/9yNFQZj/Mariano-Girbau.jpg"
+            class="card-img-top fotoCircle"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <h4 class="card-text text-center mt-3">Mariano Girbau</h4>
+        </div>
+        <div class="d-flex justify-content-center mb-4">
+          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
+          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
+          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- contenedor 2 -->
+    <div class="d-flex mx-5 my-4">
+      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
+        <div class="d-flex justify-content-center mt-4">
+          <img
+            src="https://i.ibb.co/9pm2Xwt/Imagen-de-Whats-App-2023-05-15-a-las-23-52-53.jpg"
+            class="card-img-top fotoCircle"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <h4 class="card-text text-center mt-3">Martin Fernandez</h4>
+        </div>
+        <div class="d-flex justify-content-center mb-4">
+          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
+          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
+          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- contenedor 3 -->
+    <div class="d-flex mx-5 my-4">
+      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
+        <div class="d-flex justify-content-center mt-4">
+          <img
+            src="https://i.ibb.co/qWfXVty/Sin-t-tulo.jpg"
+            class="card-img-top fotoCircle"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <h4 class="card-text text-center mt-3">Daniel Spiner</h4>
+        </div>
+        <div class="d-flex justify-content-center mb-4">
+          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
+          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
+          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- contenedor 4 -->
+    <div class="d-flex mx-5 my-4">
+      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
+        <div class="d-flex justify-content-center mt-4">
+          <img
+            src="https://i.ibb.co/T28XHT5/pablo.jpg"
+            class="card-img-top fotoCircle"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <h4 class="card-text text-center mt-3">Pablo Decima</h4>
+        </div>
+        <div class="d-flex justify-content-center mb-4">
+          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
+          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
+          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- contenedor 5 -->
+    <div class="d-flex mx-5 my-4">
+      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
+        <div class="d-flex justify-content-center mt-4">
+          <img src="https://i.ibb.co/1XF5mmP/Imagen-de-Whats-App-2023-05-25-a-las-22-04-05.jpg" class="card-img-top fotoCircle" alt="..." />
+        </div>
+        <div class="card-body">
+          <h4 class="card-text text-center mt-3">Nahuel Bardera</h4>
+        </div>
+        <div class="d-flex justify-content-center mb-4">
+          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
+          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
+          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+  </div>
   <!-- Scripts -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script> <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script> <!-- Bootstrap -->
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script> <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
-  <script src="../js/login.js"></script> <!-- Login -->
+    <script src="../js/productos.js"></script>
+    <script src="../js/login.js"></script> <!-- Login -->
+    <script src="../js/generarUsuarios.js" type="module"></script>
 
 </body>
+
 <footer class="col-12 footer-conteiner">
   <div class="row col-12 p-3 m-0 footer-principal">
     <div class="col-xs-12 col-md-3 col-lg-3">

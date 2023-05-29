@@ -42,9 +42,9 @@ function productosCargados() {
     }
   }
 
-  function uuidv4() {
-    return crypto.randomUUID();
-  }
+function uuidv4() {
+  return crypto.randomUUID();
+}
 
 productosCargados();
 
