@@ -4,7 +4,6 @@ let productos = []; //arreglo de productos
 
 //Agregar Productos Predefinidos
 function productosCargados() {
-
     if (!productosLocalStorage) {
         
       let producto1 = new Producto(
@@ -39,6 +38,7 @@ function productosCargados() {
       productos.push(producto1, producto2, producto3, producto4); //agrego los productos al arreglo
       console.log(productos)
       localStorage.setItem("productos", JSON.stringify(productos)); // agrego el arreglo al localStorage
+      location.reload();
     }
   }
 
