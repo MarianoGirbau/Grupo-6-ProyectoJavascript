@@ -32,5 +32,5 @@ function uuidv4() {
     return crypto.randomUUID();
 }
   
-  //Genero el usuario admin
-  usuariosCargados()
+//Genero el usuario admin
+usuariosCargados()

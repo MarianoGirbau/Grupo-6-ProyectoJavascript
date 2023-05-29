@@ -48,7 +48,7 @@ function uuidv4() {
 
 productosCargados();
 
-//Para buscador deberia establecer un valor de mostrado, y que dentro del foreach vea con uin if si el nombre coincide con lo buscado y mostrarlo, si no no entra en el if
+//Para buscador deberia establecer un valor de mostrado, y que dentro del foreach vea con un if si el nombre coincide con lo buscado y mostrarlo, si no, no entra en el if
 
 const listaProductos = document.getElementById("productos");
 productosLocalStorage.forEach((producto) => {

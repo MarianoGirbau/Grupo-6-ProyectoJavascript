@@ -270,9 +270,12 @@ footer{
   font-family: "Courier New", monospace;
 }
 
+.body-adm{
+  background-image: url(https://fondosmil.com/fondo/28064.jpg);
+}
+
 #Adm {
   padding: 20px;
-  background-image: url(https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=1920&s=35030b396d08e9b102b5ac3771b0ae22%201920w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=1620&s=29ce59caac33467547cc3d962ddbf862%201620w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=1320&s=24e5ab07cdcf93f70168f0d562a58c7c%201320w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=1020&s=acc4f1bc845f1345c3e276d46aa30ae5%201020w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=960&s=cbb3b5a728dc10f74928da0bc85946c2%20960w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=660&s=43dcd04eca52de1ed4b5a5dc579dca91%20660w,%20https://maxonassets.imgix.net/images/hexagonal-background.jpg?auto=compress%2Cformat&fit=clip&q=80&w=540&s=5435bea2f01bdcccf3427b2972347f26%20540w);
   min-height: 100vh;
 }
 
