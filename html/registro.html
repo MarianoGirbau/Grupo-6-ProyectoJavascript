@@ -8,10 +8,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <title>FlowHardware</title>
 </head>
 <header>
@@ -85,9 +82,9 @@
   </nav>
 </header>
 
-<body class="colorfondo">
-   <!-- MODAL -->
-   <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<body class="body-adm">
+  <!-- MODAL -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -120,9 +117,9 @@
               class="bi bi-arrow-down-circle d-flex justify-content-center align-items-center"></i>
 
             <div class="container-fluid d-flex justify-content-center mt-1 px-0">
-              <a href="./html/registro.html" class="btn btn-primary btn-modal m-0 w-100">
+              <button type="submit" class="btn btn-primary btn-modal m-0 w-100">
                 Registrate
-              </a>
+              </button>
             </div>
 
             <hr>
@@ -140,156 +137,57 @@
     </div>
   </div>
 
-  <div>
-    <h1 class="text-center my-5">¿Quienes somos?</h1>
-  </div>
-  <!-- contenedor 1 -->
-
-  <div class="container fach text-center p-5">
-    <p>
-      Bienvenido/a a nuestra página web de hardware, el destino perfecto para
-      los entusiastas de la tecnología y los amantes de la informática. Aquí
-      en nuestra tienda online, encontrarás una amplia selección de
-      componentes de hardware de última generación, diseñados para potenciar y
-      mejorar tu experiencia tecnológica.
-      <br />
-    </p>
-    <p>
-      Nuestro catálogo abarca una gran variedad de productos, desde potentes
-      procesadores y tarjetas gráficas de alto rendimiento, hasta placas base
-      confiables, memorias RAM de velocidad sobresaliente y unidades de
-      almacenamiento ultrarrápidas. También ofrecemos periféricos de calidad,
-      como teclados, ratones, monitores y auriculares, que te brindarán una
-      interacción fluida y envolvente con tu equipo.
-    </p>
-    <p>
-      Trabajamos con los principales fabricantes de hardware, lo que nos
-      permite ofrecer productos de calidad excepcional y rendimiento
-      garantizado. Nuestro equipo de expertos está siempre dispuesto a
-      brindarte asesoramiento personalizado y orientación para ayudarte a
-      encontrar la solución perfecta que se ajuste a tus necesidades y
-      presupuesto.
-    </p>
-  </div>
-
-  <div class="container my-5">
-    <hr />
-  </div>
-
+  <div id="Adm">
+  <div class="col-10 col-xl-3 col-md-8 col-sm-8 mt-5 mx-auto mb-5 form-suscripcion border border-light rounded purple-form">
+    <h2 class="text-center">Regístrese a</h2>
+    <h4 class="text-center">FlowHardware</h4>
   
-
-  <div class="container d-flex flex-wrap justify-content-center">
-    <!-- contenedor 1 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img
-            src="https://i.ibb.co/9yNFQZj/Mariano-Girbau.jpg"
-            class="card-img-top fotoCircle"
-            alt="..."
-          />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Mariano Girbau</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
+    <form class="row g-3 container-fluid" id="reg-form" method="get">
+      <div>
+        <label for="nombre" class="form-label">Nombre de usuario:</label>
+        <input type="text" class="form-control suscripcion-inputs" pattern="[A-Za-z]{1,10}"
+          title="Largo máximo 15 caracteres" required="" id="nombreReg">
+      </div>
+  
+      <div class="row"></div>
+      <div>
+        <label for="email" class="form-label">E-Mail:</label>
+        <input type="email" class="form-control suscripcion-inputs" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          title="Use el formato ejemplo@ejemplo.com" required="" id="emailReg">
+      </div>
+      <div class="row"></div>
+      <div>
+        <label for="contrasena" class="form-label">Contraseña:</label>
+        <input type="password" class="form-control suscripcion-inputs" minlength="8" maxlength="20"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Una mayuscula,una minuscula y números. Tamaño mínimo: 8. Tamaño máximo: 20" required="" id="contraseñaReg">
+      </div>
+      <div class="row"></div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required="">
+          <label class="form-check-label" for="gridCheck">
+            Acepta términos y condiciones.
+          </label>
         </div>
       </div>
-    </div>
-    <!-- contenedor 2 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img
-            src="https://i.ibb.co/9pm2Xwt/Imagen-de-Whats-App-2023-05-15-a-las-23-52-53.jpg"
-            class="card-img-top fotoCircle"
-            alt="..."
-          />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Martin Fernandez</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
-        </div>
+      <div class="col-md-12 mb-3 text-center">
+        <button type="submit" class="btn boton-suscripcion border-visible-btn" id="btn-registrarse">Registrarse</button>
       </div>
-    </div>
-    <!-- contenedor 3 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img
-            src="https://i.ibb.co/qWfXVty/Sin-t-tulo.jpg"
-            class="card-img-top fotoCircle"
-            alt="..."
-          />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Daniel Spiner</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- contenedor 4 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img
-            src="https://i.ibb.co/T28XHT5/pablo.jpg"
-            class="card-img-top fotoCircle"
-            alt="..."
-          />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Pablo Decima</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- contenedor 5 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img src="https://i.ibb.co/1XF5mmP/Imagen-de-Whats-App-2023-05-25-a-las-22-04-05.jpg" class="card-img-top fotoCircle" alt="..." />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Nahuel Bardera</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
-        </div>
-      </div>
-    </div>
-
-    
-
-    
+    </form>
+  </div>
   </div>
   <!-- Scripts -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script> <!-- Bootstrap -->
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script> <!-- Bootstrap -->
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script> <!-- Sweet Alert -->
 
   <script src="../js/login.js"></script> <!-- Login -->
   <script src="../js/generarUsuarios.js" type="module"></script>
+  <script src="../js/registro.js" type="module"></script>
 
 </body>
 

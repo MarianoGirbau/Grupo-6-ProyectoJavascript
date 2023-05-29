@@ -434,3 +434,44 @@ textarea:required:focus {
   font-size: 24px;
 }
 
+/*Registro*/
+
+.border-visible-btn {
+  border: 1px solid black !important;
+}
+
+.border-visible-btn {
+  border: 1px solid black !important;
+}
+
+.border-visible-btn:active {
+  outline: none;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.purple-form {
+  background-color: #F2E5FF; /* Color de fondo morado claro */
+  border-color: #CDA6FF; /* Color del borde morado más oscuro */
+  color: #4D1979; /* Color del texto morado oscuro */
+}
+
+.purple-form h2, .purple-form h4 {
+  color: #4D1979; /* Color del texto morado oscuro para los encabezados */
+}
+
+.purple-form label {
+  color: #4D1979; /* Color del texto morado oscuro para las etiquetas */
+}
+
+.purple-form input, .purple-form select {
+  background-color: #E6D1FF; /* Color de fondo morado claro para los campos de entrada */
+  border-color: #CDA6FF; /* Color del borde morado más oscuro para los campos de entrada */
+  color: #4D1979; /* Color del texto morado oscuro para los campos de entrada */
+}
+
+.purple-form button {
+  background-color: #CDA6FF; /* Color de fondo morado más oscuro para el botón */
+  border-color: #CDA6FF; /* Color del borde morado más oscuro para el botón */
+  color: #FFFFFF; /* Color del texto blanco para el botón */
+}
