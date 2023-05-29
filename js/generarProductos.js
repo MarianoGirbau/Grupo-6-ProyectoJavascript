@@ -53,14 +53,14 @@ productosCargados();
 const listaProductos = document.getElementById("productos");
 productosLocalStorage.forEach((producto) => {
   const tarjetaHTML= `
-  <div class="col-6 col-md-4 mb-1">
+  <div class="col-6 col-md-4 my-1 p-1">
       <div class="card mb-4" style="border: 5px solid #ccc; height:100%;">
           <img src="${producto.imagen}" class="card-img-top" alt="Producto 1">
-          <div class="card-body">
-              <h5 class="card-title">${producto.nombre}</h5>
+          <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-auto">${producto.nombre}</h5>
               <p class="card-text d-none d-lg-block">${producto.descripcion}</p>
               <p class="card-text font-weight-bold" style="color: rgb(226, 124, 0);">$${producto.precio}</p>
-              <div class="text-center ">
+              <div class="text-center container-fluid px-0">
                   <button class="btn bottom-0 btn-agregar agregarCarrito" data-id="${producto.id}">Comprar</button> 
               </div>
           </div>
