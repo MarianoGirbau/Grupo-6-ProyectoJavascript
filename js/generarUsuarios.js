@@ -3,7 +3,6 @@ const usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios"));
 let usuarios = []; //arreglo usuarios
 
 function usuariosCargados() {
-    console.log(usuariosLocalStorage)
     if (!usuariosLocalStorage) {
         
       let admin = new Usuario(

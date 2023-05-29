@@ -309,12 +309,12 @@ footer{
 }
 
 .btn-agregar {
-  background-color: rgb(128, 116, 191);
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  color: rgb(235, 232, 251);
-  cursor: pointer;
+  background-color: rgb(128, 116, 191) !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  color: rgb(235, 232, 251) !important;
+  cursor: pointer !important;
 }
 
 .btn-agregar:hover {
