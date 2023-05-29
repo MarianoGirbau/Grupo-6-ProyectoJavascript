@@ -1,3 +1,8 @@
+
+.fondo{
+  background-color: #8a63b8;
+}
+
 .btn-product{
   background-color: #E73700;
   color: white;
@@ -18,7 +23,7 @@
 }
 
 .price-product{
-  color: #E73700;
+  color: #00e73a;
   font-weight: 600;
 }
 
@@ -79,7 +84,7 @@
 
 
 .review-item {
-  border: 5px solid #ccc;
+  border: 5px solid #f0e7f5;
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -108,4 +113,30 @@
 
 .sangria {
   margin-left: 10px;
+}
+
+/* Estilos para las cartas de comentarios */
+.review-item {
+  background-color: #8a63b8;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.review-item .people-review-name h5 {
+  color: #ffffff;
+}
+
+.review-item p {
+  color: #ffffff;
+}
+
+.purple-bg {
+  background-color: #9370db;
+}
+
+/* Estilos para las estrellas */
+.bi-star-fill, .bi-star {
+  color: #ffffff;
 }
