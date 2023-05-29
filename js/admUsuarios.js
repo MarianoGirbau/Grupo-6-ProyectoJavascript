@@ -115,8 +115,8 @@ document.getElementById('user-form')
     .addEventListener('submit', function(event){
       
     const nombre = document.getElementById('nombre').value
-    const email = document.getElementById('email').value
-    const contraseña = document.getElementById('contraseña').value
+    const email = document.getElementById('emailAdm').value
+    const contraseña = document.getElementById('contraseñaAdm').value
     let admin = document.getElementById('admin').checked  //se fija si el checkbox está activo
 
     if (nombre != "" && email != "" && contraseña != "") {

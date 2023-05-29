@@ -13,6 +13,15 @@
     <title>FlowHardware</title>
 </head>
 
+<script>
+    const sesionActiva = JSON.parse(localStorage.getItem('sesion')) || false
+      if(!sesionActiva){
+        window.location.href = '../index.html';
+      }else if (!sesionActiva.admin) {
+        window.location.href = '../index.html';  
+      }
+  </script>
+
 <header>
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark navegador sticky-top">
@@ -69,16 +78,6 @@
                         </li>
 
                         <hr /><!-- Divisor -->
-
-                        <div class="mx-auto col-lg-6 col-md-12 rounded buscador">
-                            <form class="d-flex" role="search" action="./error404.html">
-                                <input class="form-control rounded-0 busqueda" type="search"
-                                    placeholder="Buscar componentes" aria-label="Search" />
-                                <button class="btn buscar" type="submit">
-                                    Buscar
-                                </button>
-                            </form>
-                        </div>
                     </ul>
 
                 </div>
@@ -153,8 +152,8 @@
             </div>
         </div>
     </div>
-    <div class="container-xxl">
-        <div id="Adm" class="row pt-5">
+    <div id="Adm" class="container-xxl">
+        <div  class="row pt-5">
             <div class=" col-md-12 col-lg-4">
                 <div class="agregar">
                     <div class="agregar-header">
@@ -167,12 +166,12 @@
                         </div>
 
                         <div class="mb-3">
-                            <input type="text" id="email" placeholder="ejemplo@mail.com" class="form-control"
+                            <input type="text" id="emailAdm" placeholder="ejemplo@mail.com" class="form-control"
                                 title="Debe respetar el formato: ejemplo@email.com" required>
                         </div>
 
                         <div class="mb-3">
-                            <input type="password" id="contraseña" placeholder="*******" class="form-control"
+                            <input type="password" id="contraseñaAdm" placeholder="Contraseña" class="form-control"
                                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="20"
                                 title="Ingresa una contraseña válida (8 caracteres mínimo, 1 mayúsculas y 1 número)."
                                 required>
@@ -191,11 +190,11 @@
                 <table class="table table-hover align-middle">
                     <thead>
                         <tr>
-                            <th class="w-25">Nombre</th>
-                            <th class="w-25">Email</th>
-                            <th class="w-25">Contraseña</th>
-                            <th class="w-25">Admin</th>
-                            <th class="w-25">Acciones</th>
+                            <th class="w-25 titulo-blanco-llamativo">Nombre</th>
+                            <th class="w-25 titulo-blanco-llamativo">Email</th>
+                            <th class="w-25 titulo-blanco-llamativo">Contraseña</th>
+                            <th class="w-25 titulo-blanco-llamativo">Admin</th>
+                            <th class="w-25 titulo-blanco-llamativo">Acciones</th>
                         </tr>
                     </thead>
                     <tbody></tbody>

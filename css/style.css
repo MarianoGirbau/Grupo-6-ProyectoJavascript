@@ -321,7 +321,7 @@ footer{
   background-color: rgb(84, 73, 135);
 }
 
-#lista-productos {
+#lista-productos, #lista-usuarios {
   background-color: rgba(176, 166, 224, 0.5);
   padding: 20px;
   color: white;
