@@ -66,14 +66,6 @@
 
         </div>
       </div>
-      <a class="navbar-brand" href="./error404.html" alt="Enlace a nuestra pagina de twitter">
-        <svg class="text-right m-1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-          class="bi bi-cart" viewBox="0 0 16 16">
-          <path
-            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-            fill="#dcb2ce" />
-        </svg>
-      </a>
       <button type="button" id="boton-login" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" data-bs-toggle="modal"
         data-bs-target="#myModal" role="button">Login</button>
       <button onclick="logout()" id="boton-logout" class="btn ms-0 ms-sm-1 ms-md-1 ms-lg-5 login" style="display: none;"
@@ -83,6 +75,59 @@
 </header>
 
 <body class="fondo">
+  <!-- MODAL -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="logo-container">
+            <a href=""><img src="../src/Logo.png" alt="Logo" /></a>
+          </div>
+          <h4 class="modal-title">Login FlowHardware</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-container">
+            <form id="loginForm">
+              <div class="pb-3">
+                <label for="email" class="pb-2">Email:</label>
+                <input type="email" class="form-control" title="Introduce un email valido" id="email"
+                  placeholder="Introduce tu email" />
+              </div>
+              <div class="pb-3">
+                <label for="contraseña" class="pb-2">Contraseña:</label>
+                <input type="password" class="form-control" maxlength="20" id="contraseña"
+                  placeholder="Introduce tu contraseña" />
+              </div>
+              <div class="container-fluid d-flex justify-content-center px-0">
+                <button type="submit" class="btn btn-primary btn-modal m-0 w-100">
+                  Login
+                </button>
+              </div>
+            </form>
+            <p class="text-center pt-2">No tienes una cuenta?</p> <i
+              class="bi bi-arrow-down-circle d-flex justify-content-center align-items-center"></i>
+
+            <div class="container-fluid d-flex justify-content-center mt-1 px-0">
+              <a href="./html/registro.html" class="btn btn-primary btn-modal m-0 w-100">
+                Registrate
+              </a>
+            </div>
+
+            <hr>
+
+            <div class="social-icons">
+              <a href="./html/error404.html"><i class="bi bi-facebook"></i></a>
+              <a href="./html/error404.html"><i class="bi bi-google"></i></a>
+              <a href="./html/error404.html"><i class="bi bi-instagram"></i></a>
+              <a href="./html/error404.html"><i class="bi bi-twitter"></i></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <section class="py-1">
     <div class="container px-4 px-lg-5 my-5">
       <p class="text-white">
