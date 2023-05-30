@@ -197,7 +197,7 @@ footer{
 /****Sobre Nosotros****/
 
 .colorfondo{
-  background-color: #6c5ce7 !important; 
+  background-color: #55379c !important; 
   }
 
 .fach{
@@ -205,7 +205,7 @@ footer{
   font-weight: bold !important;
   border-radius: 0.5em !important;
   box-shadow: inset 1px 1px 22px 4px rgba(0,0,0,0.85) !important;
-
+  color: #dcb2ce;
 }
 
 .fotoCircle{
@@ -605,4 +605,147 @@ textarea:required:focus {
 
   stroke: red;
   cursor: pointer;
+}
+
+/*Pagina productos*/
+
+.fondo{
+  background-color: #8a63b8;
+}
+
+.btn-product{
+  background-color: #E73700;
+  color: white;
+}
+
+.banner-category{
+  height: 40hv;
+  background-image:  url(../src/1.jpg), linear-gradient(rgb(163, 135, 135), rgb(175, 194, 8));
+  background-size: cover;
+  background-position: 69%;
+}
+
+.banner-category-sofa{
+  height: 40hv;
+  background-image:  url(../src/sofa-banner.jpeg), linear-gradient(rgb(163, 135, 135), rgb(175, 194, 8));
+  background-size: cover;
+  background-position: 69%;
+}
+
+.price-product{
+  color: #00e73a;
+  font-weight: 600;
+}
+
+.title-product{
+  font-weight: bold;
+}
+
+.row-comentarios{
+  border: 1px solid rgb(124, 124, 124);
+}
+
+.people-container{
+  position: relative;
+  display: flex;
+  align-items: end;
+  flex-direction: row;
+}
+
+.people-review-image{
+  height: 70px;
+  width: 71px;
+  border-radius: 50%;
+}
+
+.people-review-name{
+  vertical-align: middle;
+  align-self: center;
+}
+
+.p-review{
+  line-height: 2;
+}
+
+
+.bi-star-fill{
+  color: #fbd600;
+  
+}
+
+.paginationContainer{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.paginationContainer a{
+  color: #E73700;
+}
+
+.boton-color:hover{background: color;}
+
+@media screen and (max-width: 600px) {
+  iframe {
+      width: 90vw; 
+}
+}
+
+
+.review-item {
+  border: 5px solid #f0e7f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.people-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.people-review-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.people-review-name h5 {
+  margin: 0;
+}
+
+.p-review {
+  margin-bottom: 0;
+}
+
+
+.sangria {
+  margin-left: 10px;
+}
+
+/* Estilos para las cartas de comentarios */
+.review-item {
+  background-color: #8a63b8;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.review-item .people-review-name h5 {
+  color: #ffffff;
+}
+
+.review-item p {
+  color: #ffffff;
+}
+
+.purple-bg {
+  background-color: #9370db;
+}
+
+/* Estilos para las estrellas */
+.bi-star-fill, .bi-star {
+  color: #ffffff;
 }

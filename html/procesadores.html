@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FlowHardware</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <header>
   <!-- Nav -->
@@ -85,212 +82,178 @@
   </nav>
 </header>
 
-<body class="colorfondo">
-   <!-- MODAL -->
-   <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="logo-container">
-            <a href=""><img src="../src/Logo.png" alt="Logo" /></a>
-          </div>
-          <h4 class="modal-title">Login FlowHardware</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<body class="fondo">
+  <section class="py-1">
+    <div class="container px-4 px-lg-5 my-5">
+      <p class="text-white">
+        <a href="../html/index.html">Productos</a> /
+        Procesadores
+      </p>
+      <div class="row align-items-start">
+        <div class="col-md-6">
+          <img src="https://i.ibb.co/h8RVWvZ/ryzen9.webp" class="card-img-top"
+            alt="foto de producto tecnologico vintage" />
         </div>
-        <div class="modal-body">
-          <div class="form-container">
-            <form id="loginForm">
-              <div class="pb-3">
-                <label for="email" class="pb-2">Email:</label>
-                <input type="email" class="form-control" title="Introduce un email valido" id="email"
-                  placeholder="Introduce tu email" />
-              </div>
-              <div class="pb-3">
-                <label for="contraseña" class="pb-2">Contraseña:</label>
-                <input type="password" class="form-control" maxlength="20" id="contraseña"
-                  placeholder="Introduce tu contraseña" />
-              </div>
-              <div class="container-fluid d-flex justify-content-center px-0">
-                <button type="submit" class="btn btn-primary btn-modal m-0 w-100">
-                  Login
-                </button>
-              </div>
-            </form>
-            <p class="text-center pt-2">No tienes una cuenta?</p> <i
-              class="bi bi-arrow-down-circle d-flex justify-content-center align-items-center"></i>
+        <div class="col-md-6 pt-3 pt-md-0 pt-lg-3">
+          <h2 class="text-white">Ryzen 9 7950x</h2>
+          <div class="fs-4 mb-3 mb-md-2 mb-lg-5">
+            <span class="price-product ">$413.000</span>
+          </div>
 
-            <div class="container-fluid d-flex justify-content-center mt-1 px-0">
-              <a href="./html/registro.html" class="btn btn-primary btn-modal m-0 w-100">
-                Registrate
-              </a>
-            </div>
+          <p class="text-white"><span class="sangria text-withe">Es</span> ideal para jugadores y creadores de contenido
+            que requieran un instrumento de gran ejecución. Cuenta con 32 hilos que favorecen la ejecución de múltiples
+            programas a la vez.</p>
 
-            <hr>
-
-            <div class="social-icons ">
-              <a href="./error404.html"><i class="bi bi-facebook"></i></a>
-              <a href="./error404.html"><i class="bi bi-google"></i></a>
-              <a href="./error404.html"><i class="bi bi-instagram"></i></a>
-              <a href="./error404.html"><i class="bi bi-twitter"></i></a>
-            </div>
-
+          <div class="d-flex">
+            <input type="text" class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
+              style="max-width: 3rem" />
+            <a href="../html/cart2.html">
+              <button class="btn btn-product me-3" type="button">
+                <i class="bi-cart-fill me-1"></i>
+                Comprar
+              </button>
+            </a>
+            <a href="" class=" btn-light border px-2 pt-2 me-3 icon-hover"><i class="bi bi-heart px-1"></i></a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div>
-    <h1 class="text-center">¿Quienes somos?</h1>
-  </div>
-  <!-- contenedor 1 -->
-
-  <div class="container fach text-center p-5">
-    <p>
-      Bienvenido/a a nuestra página web de hardware, el destino perfecto para
-      los entusiastas de la tecnología y los amantes de la informática. Aquí
-      en nuestra tienda online, encontrarás una amplia selección de
-      componentes de hardware de última generación, diseñados para potenciar y
-      mejorar tu experiencia tecnológica.
-      <br />
-    </p>
-    <p>
-      Nuestro catálogo abarca una gran variedad de productos, desde potentes
-      procesadores y tarjetas gráficas de alto rendimiento, hasta placas base
-      confiables, memorias RAM de velocidad sobresaliente y unidades de
-      almacenamiento ultrarrápidas. También ofrecemos periféricos de calidad,
-      como teclados, ratones, monitores y auriculares, que te brindarán una
-      interacción fluida y envolvente con tu equipo.
-    </p>
-    <p>
-      Trabajamos con los principales fabricantes de hardware, lo que nos
-      permite ofrecer productos de calidad excepcional y rendimiento
-      garantizado. Nuestro equipo de expertos está siempre dispuesto a
-      brindarte asesoramiento personalizado y orientación para ayudarte a
-      encontrar la solución perfecta que se ajuste a tus necesidades y
-      presupuesto.
-    </p>
-  </div>
-
-  <div class="container my-5">
-    <hr />
-  </div>
-
-  
-
-  <div class="container d-flex flex-wrap justify-content-center">
-    <!-- contenedor 1 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img
-            src="https://i.ibb.co/9yNFQZj/Mariano-Girbau.jpg"
-            class="card-img-top fotoCircle"
-            alt="..."
-          />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Mariano Girbau</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
+  <!-- Comentarios -->
+  <section class="py-1">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center mb-4">
+        <h2 class="title-product px-5 text-white">Comentarios</h2>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="review-item">
+            <div class="people-container">
+              <div class="d-flex py-3">
+                <img src="../src/enzo.png" class="people-review-image" alt="foto de persona 2" />
+                <div class="people-review-name px-3">
+                  <h5>Enzo de la Fuente</h5>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="p-review">
+              <span class="sangria">El</span> procesador Ryzen que adquirí superó todas mis expectativas. Su rendimiento
+              en tareas de multitarea y renderizado es impresionante. Además, la eficiencia energética de este
+              procesador es destacable, lo que se traduce en un menor consumo de energía y una temperatura más baja
+              durante su funcionamiento.
+            </p>
+          </div>
+          <div class="review-item">
+            <div class="people-container">
+              <div class="d-flex py-3">
+                <img src="../src/gonzalo.png" class="people-review-image" alt="foto de persona 1" />
+                <div class="people-review-name px-3">
+                  <h5>Gonzalo Juarez</h5>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="p-review">
+              <span class="sangria">El</span> procesador Ryzen ha mejorado significativamente mi experiencia de juego.
+              Su potencia de cálculo y su capacidad para manejar cargas intensivas de gráficos hacen que los juegos se
+              ejecuten suavemente y sin problemas. Definitivamente, es una opción excelente para los gamers exigentes.
+            </p>
+          </div>
+          <div class="review-item">
+            <div class="people-container">
+              <div class="d-flex py-3">
+                <img src="../src/cin.png" class="people-review-image" alt="foto de persona 3" />
+                <div class="people-review-name px-3">
+                  <h5>Cinthia Karapova</h5>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star"></i>
+                  <i class="bi-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="p-review">
+              <span class="sangria">El</span> procesador Ryzen ha acelerado mi flujo de trabajo en edición de video. Su
+              capacidad para procesar rápidamente grandes archivos de video y aplicar efectos en tiempo real ha sido
+              fundamental para mejorar mis tareas diarias.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <!-- contenedor 2 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img
-            src="https://i.ibb.co/9pm2Xwt/Imagen-de-Whats-App-2023-05-15-a-las-23-52-53.jpg"
-            class="card-img-top fotoCircle"
-            alt="..."
-          />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Martin Fernandez</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- contenedor 3 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img
-            src="https://i.ibb.co/qWfXVty/Sin-t-tulo.jpg"
-            class="card-img-top fotoCircle"
-            alt="..."
-          />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Daniel Spiner</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- contenedor 4 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img
-            src="https://i.ibb.co/T28XHT5/pablo.jpg"
-            class="card-img-top fotoCircle"
-            alt="..."
-          />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Pablo Decima</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- contenedor 5 -->
-    <div class="d-flex mx-5 my-4">
-      <div class="card fach cambiocolor" style="width: 20rem; height: 23rem">
-        <div class="d-flex justify-content-center mt-4">
-          <img src="https://i.ibb.co/1XF5mmP/Imagen-de-Whats-App-2023-05-25-a-las-22-04-05.jpg" class="card-img-top fotoCircle" alt="..." />
-        </div>
-        <div class="card-body">
-          <h4 class="card-text text-center mt-3">Nahuel Bardera</h4>
-        </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-2"></i></a>
-          <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-2"></i></a>
-          <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-2"></i></a>
-        </div>
-      </div>
-    </div>
+  </section>
 
-    
 
-    
-  </div>
+  <!-- Productos Similares -->
+  <section>
+    <div class="container py-1">
+      <div class="text-center mb-4">
+        <h2 class="title-product px-5 text-white">Productos similares</h2>
+      </div>
+      <div class="row mx-3 px-3">
+        <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
+          <a href="../html/404.html">
+            <div class="my-2 shadow-2-strong">
+              <img src="https://i.ibb.co/Dkzy9WD/AMDRyzen-Threadripper3970-X.webp" class="card-img-top"
+                alt="foto de producto tecnologico vintage" />
+              <div class="card-body align-items-center">
+                <h5 class="my-3 text-center text-white">AMD Ryzen Threadripper 3970X</h5>
+                <p class="text-center text-white">$1.190.000</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
+          <a href="../html/404.html">
+            <div class="w-100 my-2 shadow-2-strong">
+              <img src="https://i.ibb.co/QnMzSWJ/Amd-Ryzen77700.webp" class="card-img-top"
+                alt="foto de producto tecnologico vintage" />
+              <div class="card-body align-items-center mt-4">
+                <h5 class="my-3 text-center text-white ">
+                  Amd Ryzen 7 7700
+                </h5>
+                <p class="text-center text-white">$215.200</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
+          <a href="../html/404.html">
+            <div class="w-100 my-2 shadow-2-strong">
+              <img src="https://i.ibb.co/DCz2nGv/AMDRYZEN77700-RAPHAELZEN4-AM5.png" class="card-img-top"
+                alt="foto de producto tecnologico vintage" />
+              <div class="card-body align-items-center mt-4">
+                <h5 class="my-3 text-center text-white">Amd Ryzen 7 7800</h5>
+                <p class="text-center text-white">$365.000</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Scripts -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script> <!-- Bootstrap -->
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script> <!-- Bootstrap -->
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script> <!-- Sweet Alert -->
 
   <script src="../js/login.js"></script> <!-- Login -->
   <script src="../js/generarUsuarios.js" type="module"></script>
-
 </body>
 
 <footer class="col-12 footer-conteiner">

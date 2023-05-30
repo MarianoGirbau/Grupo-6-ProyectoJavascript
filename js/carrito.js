@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const productoHTML = `
       <div class="cart-product">
         <div class="info-cart-product">
-          <span class="cantidad-producto-carrito"> 1 </span>
+          <span class="cantidad-producto-carrito sangria text-withe"> 1 </span>
           <p class="titulo-producto-carrito">${producto.titulo}</p>
           <span class="precio-producto-carrito">${producto.precio}</span>
         </div>
