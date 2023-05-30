@@ -43,35 +43,6 @@ function productosCargados() {
   }
 
   
-// //Busqueda
-// function buscar(){
-//   var cadenaBusqueda = document.getElementById("busqueda").value;
-
-//   var productosFiltrados = productos.filter(function(producto) {
-//     var nombreProducto = producto.nombre.toLowerCase();
-//     var cadenaBusquedaMinusculas = cadenaBusqueda.toLowerCase();
-//     return nombreProducto.includes(cadenaBusquedaMinusculas);
-//   });
-//   const productosBuscados = document.getElementById("modal-busqueda")
-//   productosFiltrados.forEach((producto)=>{
-//     const tarjetaHTML= `
-//     <div class="col-6 col-md-4 my-1 p-1">
-//         <div class="card mb-4" style="border: 5px solid #ccc; height:100%;">
-//             <img src="${producto.imagen}" class="card-img-top" alt="Producto 1">
-//             <div class="card-body d-flex flex-column">
-//                 <h5 class="card-title mb-auto">${producto.nombre}</h5>
-//                 <p class="card-text d-none d-lg-block">${producto.descripcion}</p>
-//                 <p class="card-text font-weight-bold" style="color: rgb(226, 124, 0);">$${producto.precio}</p>
-//                 <div class="text-center container-fluid px-0">
-//                     <button class="btn bottom-0 btn-agregar agregarCarrito" data-id="${producto.id}">Comprar</button> 
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     `;
-//     productosBuscados.innerHTML+=tarjetaHTML;
-//   })
-// }
 
 //Genera id aleatorios
 function uuidv4() {
@@ -93,7 +64,7 @@ productosLocalStorage.forEach((producto) => {
                 <p class="card-text d-none d-lg-block">${producto.descripcion}</p>
                 <p class="card-text font-weight-bold" style="color: rgb(226, 124, 0);">$${producto.precio}</p>
                 <div class="text-center container-fluid px-0">
-                    <button class="btn bottom-0 btn-agregar agregarCarrito" data-id="${producto.id}">Comprar</button> 
+                  <a class="btn btn-primary compra" id="compra">Comprar</a>
                 </div>
             </div>
         </div>
