@@ -64,10 +64,10 @@
             <hr /><!-- Divisor -->
 
             <div class="mx-auto col-lg-6 col-md-12 rounded buscador">
-              <form class="d-flex" role="search" action="./html/error404.html">
-                <input class="form-control rounded-0 busqueda" type="search" placeholder="Buscar componentes"
-                  aria-label="Search" />
-                <button class="btn buscar" type="submit">
+              <form class="d-flex" id="buscar">
+                <input class="form-control rounded-0 busqueda" id="busqueda" type="text" placeholder="Buscar componentes"/>
+                <button onclick="buscar()" class="btn buscar" type="button" data-bs-toggle="modal"
+                data-bs-target="#buscarModal">
                   Buscar
                 </button>
               </form>
@@ -146,7 +146,27 @@
       </div>
     </div>
   </div>
-  <!-- Inicio Carrusel prueba -->
+
+  <!-- Modal Busqueda -->
+<div class="modal fade" id="buscarModal" tabindex="-1" aria-labelledby="buscarModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title w-100 text-center" id="buscarModalLabel">Búsqueda</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <hr>
+      <div class="row d-flex justify-content-center p-0" id="modal-busqueda">
+        <!-- Se generan las cards de la busqueda -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Inicio Carrusel -->
     <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -174,7 +194,7 @@
   <div class="container-fluid">
     <div class="row">
 
-      <h1 class="d-block text-center">Ofertas!</h1>
+      <h1 class="d-block text-center">Últimas Novedades!</h1>
 
       <div class="justify-content-center text-white mt-2 d-flex">
 
@@ -264,8 +284,8 @@
 
 
   <!-- CONTENEDOR PRODUCTOS -->
+  <h1 class="text-center">Nuestros Productos</h1>
   <div class="container">
-    <h1 class="text-center">Productos</h1>
 
     <div class="row d-flex" id="productos">
       <!-- AQUI SE GENERAN LOS PRODUCTOS -->
@@ -319,6 +339,7 @@
   <script src="./js/productos.js"></script>
   <script src="./js/generarProductos.js" type="module"></script>
   <script src="./js/generarUsuarios.js" type="module"></script>
+  <script src="./js/busqueda.js"></script>
 
 </body>
 
